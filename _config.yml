@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "show_exerpts:"
   안드로이드 개발자 신해나라의 블로그
 show_excerpts: true # set to true to show excerpts on the homepage
 url: "https://haenarashin.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl: /texture
+baseurl: "https://haenarashin.github.io/"
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
