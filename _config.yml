@@ -1,11 +1,10 @@
 title: Texture Theme
-author: GitHub User
-email: your-email@domain.com
+author: Haenara Shin
+email: hamster12345@gmail.customize
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  안드로이드 개발자 신해나라의 블로그
 show_excerpts: true # set to true to show excerpts on the homepage
+url: "https://haenarashin.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: /texture
 
 # Minima date format
