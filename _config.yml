@@ -1,10 +1,9 @@
-title: Texture Theme
+title: Haenara Dev Blog
 author: Haenara Shin
 email: hamster12345@gmail.customize
 description: > # this means to ignore newlines until "show_exerpts:"
   안드로이드 개발자 신해나라의 블로그
 show_excerpts: true # set to true to show excerpts on the homepage
-url: "https://haenarashin.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "https://haenarashin.github.io/"
 
 # Minima date format
@@ -14,18 +13,17 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
+  title: Haenara Dev Blog
+  tagline: 🤖 Android App Developer
+  date_format: " %Y-%b-%-d"
   style: black
-  showNav: false
+  showNav: true
   showPicker: true
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    github:  HaenaraShin
+    linkedIn: in/해나라-신-a00548107/
     rss: rss
  
 
