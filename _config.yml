@@ -17,9 +17,9 @@ texture:
   title: Haenara Dev Blog
   tagline: 🤖 Android App Developer
   date_format: " %Y-%b-%-d"
-  style: black
+  style: green
   showNav: true
-  showPicker: true
+  showPicker: false
 
   # generate social links in footer
   social_links:
