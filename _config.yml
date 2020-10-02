@@ -20,6 +20,7 @@ texture:
   style: green
   showNav: true
   showPicker: false
+  disqus_shortname: haenara
 
   # generate social links in footer
   social_links:
