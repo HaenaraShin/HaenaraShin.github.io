@@ -4,9 +4,8 @@ email: hamster12345@gmail.customize
 description: > # this means to ignore newlines until "show_exerpts:"
   안드로이드 개발자 신해나라의 블로그
 show_excerpts: true # set to true to show excerpts on the homepage
-url: ""
-baseurl: "https://haenarashin.github.io/"
-remote_theme: thelehhman/texture
+url: "https://haenarashin.github.io/"
+baseurl: ""
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
