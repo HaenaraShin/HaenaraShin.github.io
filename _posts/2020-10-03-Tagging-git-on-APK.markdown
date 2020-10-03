@@ -6,15 +6,13 @@ date:   2020-10-03 17:42:00 +0900
 categories: Android
 ---
 
-![tagging](http://heavybros.dothome.co.kr/wp-content/uploads/2020/01/tag-768x512.jpg)
-> Photo by [Kari Shea](https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/tag?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설염합니다. 
 
 안드로이드에서 처음 앱을 빌드하면 apk는 보통 
 
 `app-debug.apk` 또는 `app-release.apk`
 
 가 보통 나옵니다.
-
 
 버전관리를 위해 APK 이름에 빌드 날짜와 git 리비전을 남기고 싶다면
 아래와 같이 작성해보세요.
@@ -23,7 +21,7 @@ categories: Android
 
 앱 수준의 build.gradle(app) 에서 android{ } 안에 아래와 같이 추가 하면 됩니다
 
-```
+```groovy
 android {
     ...
     android.applicationVariants.all { variant ->
@@ -36,7 +34,7 @@ android {
 
 그 다음 android{ }밖에 changeAPKName 함수를 추가합니다.
 
-```
+```groovy
 def changeAPKName(variant) {
     variant.outputs.all { output ->
         def apkName = {
@@ -60,5 +58,7 @@ def changeAPKName(variant) {
 ```
 
 그럼 아래와 같은 형식으로 바뀝니다.
+
+![sample_result](http://heavybros.dothome.co.kr/wp-content/uploads/2020/04/apk-sample.jpg)
 
 만약 다른 방식을 원한다면 changeAPKName 함수를 수정해보세요.
