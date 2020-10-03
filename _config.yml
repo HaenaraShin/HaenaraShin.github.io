@@ -1,45 +1,45 @@
-title: Haenara Dev Blog
-author: Haenara Shin
-email: hamster12345@gmail.customize
-description: > # this means to ignore newlines until "show_exerpts:"
-  안드로이드 개발자 신해나라의 블로그
-show_excerpts: true # set to true to show excerpts on the homepage
-url: "https://haenarashin.github.io/"
+# SITE CONFIGURATION
 baseurl: ""
+url: "https://haenarashin.github.io/"
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
+# THEME-SPECIFIC CONFIGURATION
+title: Haenara's Dev Blog
+description: "🤖 Android App Developer Haenara's Dev Blog"      # used by search engines
+avatar: assets/img/avatar.png                         # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
 
-permalink: /posts/:title/
-texture:
-  title: Haenara Dev Blog
-  tagline: 🤖 Android App Developer
-  date_format: " %Y-%b-%-d"
-  style: green
-  showNav: true
-  showPicker: false
-  disqus_shortname: haenara
-  navigation:
-    - title: About Me
-      url: "/about-me"
+# Header and footer text
+header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-  # generate social links in footer
-  social_links:
-    github:  HaenaraShin
-    linkedIn: in/해나라-신-a00548107/
-    rss: rss
- 
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+# Features
+# More in the _data folder for social icons, share buttons, author and language
+# For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
+katex: true                                             # Enable if using math markup
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+cookie_consent: false                                   # To respect the usage of cookies
+disqus_shortname: haenara
 
-# Build settings
-# theme: texture
+# PAGINATION
+paginate: 5
+paginate_path: "/blog/page:num"
 
-plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+
+# BUILD SETTINGS
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules"]
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
