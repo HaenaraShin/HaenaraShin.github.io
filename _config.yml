@@ -21,6 +21,9 @@ texture:
   showNav: true
   showPicker: false
   disqus_shortname: haenara
+  navigation:
+    - title: About Me
+      url: "/about-me"
 
   # generate social links in footer
   social_links:
