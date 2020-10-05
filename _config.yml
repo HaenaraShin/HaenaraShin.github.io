@@ -3,14 +3,14 @@ baseurl: ""
 url: "https://haenarashin.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Haenara's Dev Blog
-description: "🤖 Android App Developer Haenara's Dev Blog"      # used by search engines
+title: Androbin Dev Blog
+description: "🤖 Android Developer Robin's Dev Blog"      # used by search engines
 avatar: assets/img/avatar.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
+header_text: And<code>ro</code>bin
+header_feature_image: assets/img/pexels/android-oreo-1.png
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
