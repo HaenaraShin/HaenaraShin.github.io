@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
-feature-img: "assets/img/pexels/about-me.jpg"
+feature-img: "assets/img/pexels/about-me.png"
 ---
 
 안드로이드 앱을 개발하고 있습니다.
