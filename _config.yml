@@ -9,7 +9,7 @@ avatar: assets/img/avatar.png                         # Empty for no avatar in n
 favicon: assets/favicon.png                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: And<code>ro</code>bin
+header_text: <code>Android</code> + Robin -> Androbin
 header_feature_image: assets/img/pexels/android-oreo-1.png
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
