@@ -6,7 +6,7 @@ url: "https://haenarashin.github.io/"
 title: Androbin Dev Blog
 description: "🤖 Android Developer Robin's Dev Blog"      # used by search engines
 avatar: assets/img/avatar.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+favicon: assets/favicon.png                             # Icon displayed in the tab
 
 # Header and footer text
 header_text: And<code>ro</code>bin
