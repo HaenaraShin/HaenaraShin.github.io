@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "JAR 라이브러리 뜯어고치기 (.class 파일 바이트코드 수정하기)"
+title:  "JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)"
 description: JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.
 date:   2020-10-07 23:42:00 +0900
 categories: Android
 ---
 
+> 이번 포스팅에서는 JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.
+
 ![Disaseeambling](https://haenarashin.github.io/assets/img/post/20201008_1.jpeg)
->Photo by [Barrett Ward](https://unsplash.com/@barrettward?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/disassemble?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <br>
 
