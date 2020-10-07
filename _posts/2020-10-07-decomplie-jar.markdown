@@ -61,7 +61,7 @@ $ java -cp bin ee.ioc.cs.jbe.browser.BrowserApplication
 # + 💁‍♂️ 바이트코드 수정하는 Tip
 바이트코드 명령어의 목록은 여기에서 확인할 수 있다.
 
-https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings
+**위키피디아 링크** : [https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
 
  
 
@@ -76,45 +76,15 @@ https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings
 
 가령 아래와 같이 Java 코드를 수정한다고 치자.
 
-<table>
-<tbody>
-<tr>
-<td width=200><b>Before</td>
-<td width=200><b>After</td>
-</tr>
-<tr>
-<td>
-<pre>...
-return 1;</pre>
-</td>
-<td>
-<pre>...
-return 0;</pre>
-</td>
-</tr>
-</tbody>
-</table>
+| Before    | After     |
+|-----------|-----------|
+| ```return 1;``` | ```return 0;``` |
 
 이를 Before 에서 After로 수정하고 싶다면 아래와 같이 bytecode를 수정하면 된다.
 
-<table>
-<tbody>
-<tr>
-<td width=200><b>Before</td>
-<td width=200><b>After</td>
-</tr>
-<tr>
-<td>
-<pre>iconst_1
-ireturn</pre>
-</td>
-<td>
-<pre>iconst_0
-ireturn</pre>
-</td>
-</tr>
-</tbody>
-</table>
+| Before              | After               |
+|---------------------|---------------------|
+| ```iconst_1```<br>```ireturn``` | ```iconst_0```<br>```ireturn``` |
  
 
 사실 일부사례를 더 적었으나…
