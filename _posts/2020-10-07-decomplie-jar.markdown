@@ -6,7 +6,7 @@ date:   2020-10-07 23:42:00 +0900
 categories: Android
 ---
 
-![Disaseeambling](../assets/img/post/20201008_1.jpeg)
+![Disaseeambling](https://haenarashin.github.io/assets/img/post/20201008_1.jpeg)
 >Photo by [Barrett Ward](https://unsplash.com/@barrettward?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/disassemble?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <br>
