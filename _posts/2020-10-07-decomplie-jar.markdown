@@ -10,7 +10,7 @@ categories: Android
 
 > 이번 포스팅에서는 JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.
 
-{% include aligner.html images="assets/img/post/20201008_1.jpeg" %}
+{% include aligner.html images="post/20201008_1.jpeg" %}
 
 <br>
 
