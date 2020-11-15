@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[도서리뷰] 스위프트 프로그래밍 리뷰"
-feature-img: "assets/img/post/20201115_swift_thumb.jpeg"
-thumbnail: "assets/img/post/20201115_swift_thumb.jpeg"
+feature-img: "assets/img/post/20201115_swift_thumb.JPG"
+thumbnail: "assets/img/post/20201115_swift_thumb.JPG"
 description: Swfit 스위프트 프로그래밍 3판 리뷰
 date:   2020-11-15 23:15:00 +0900
 categories: Daily
@@ -13,7 +13,7 @@ categories: Daily
 # 💁‍♂️ 이 책을 소개합니다.
 
 오늘 소개할 책은 **스위프트 프로그래밍**입니다.
-![book]({{ "/assets/img/post/20201115_swift.jpeg" | relative_url}})
+![book]({{ "/assets/img/post/20201115_swift.JPG" | relative_url}})
 
 <br>
 
