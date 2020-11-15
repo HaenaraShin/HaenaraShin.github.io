@@ -2,7 +2,7 @@
 layout: post
 title:  "개발자가 블로그로 세상을 바꾸는 방법"
 feature-img: "assets/img/post/20201115.jpeg"
-thumbnail: "assets/img/post/20201115.jpeg"
+thumbnail: "assets/img/post/geulddo.png"
 description: 글또 5기 시작 다짐글
 date:   2020-11-15 19:42:00 +0900
 categories: Daily
