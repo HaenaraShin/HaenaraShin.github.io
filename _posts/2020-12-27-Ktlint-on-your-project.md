@@ -47,7 +47,7 @@ ktlint를 적용하여 프로젝트 내의 코드 스타일을 통일하도록 *
 
 <br/><br/><br/>
 
-## 🚀 ktlint 프로젝트에 적용 준비하기
+# 🚀 ktlint 프로젝트에 적용 준비하기
 
 ![image]({{ "/assets/img/post/20201227_02.jpg" | relative_url}})<br/>
 > 개발자가 깨끗하게 해야할 것은 키보드 뿐만이 아닙니다.
@@ -58,7 +58,7 @@ ktlint를 적용하여 프로젝트 내의 코드 스타일을 통일하도록 *
 
 <br/><br/>
 
-### 1. build.gradle(root) 수정하기
+## 1. build.gradle(root) 수정하기
 
 - 최상단에 plugin `org.jlleitschuh.gradle.ktlint` 을 추가합니다.
 - 레포지토리에 maven `https://plugins.gradle.org/m2/` 을 추가합니다.
@@ -77,6 +77,7 @@ apply plugin: 'org.jlleitschuh.gradle.ktlint'
 buildscript {
 
 ...중략...
+
     repositories {
         maven {
             url "https://plugins.gradle.org/m2/"
@@ -96,7 +97,7 @@ buildscript {
 
 <br/><br/><br/>
 
-### 2. build.gradle(android module) 수정하기
+## 2. build.gradle(android module) 수정하기
 
 **안드로이드 app 모듈**에 추가하는 방법입니다. <br/>
 
@@ -129,9 +130,9 @@ ktlint {
 
 - 💁‍♂️  위에만 봐서는 이해가 잘 안된다면 [샘플 코드](https://github.com/HaenaraShin/Ktlint-Android-Sample/blob/main/app/build.gradle)를 참고해보세요. 
 
-<br/><br/>
+<br/><br/><br/>
 
-### 3. build.gradle(non-android module) 수정하기
+## 3. build.gradle(non-android module) 수정하기
 
 **순수 Java/Koltin(JAR) 모듈**에 추가하는 방법입니다. <br/>
 
@@ -163,13 +164,15 @@ ktlint {
 
 <br/><br/><br/><br/>
 
-## ktlint 적용하기
+************
+# 🛠 ktlint 적용하기
 
 ![image]({{ "/assets/img/post/20201227_01.jpeg" | relative_url}})<br/>
 > 코드를 청소할 시간입니다.
 
+<br/><br/>
 
-### 1. 수동으로 Ktlint 체크하기
+## 1. 수동으로 Ktlint 체크하기 🔍 
 
 ktlint를 적용하게 되면 수시로 체크하게 되는데요<br/>
 언제든지 아래와 같이 수동으로 코딩스타일을 준수하고 있는 지 확인할 수 있습니다.<br/><br/>
@@ -190,15 +193,18 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 
 만약 고쳐야 할 것이 있다면 아래와 같이 나옵니다.<br/>
 
-![image]({{ "/assets/img/post/20201227_sample1.png" | relative_url}})<br/>
+![image]({{ "/assets/img/post/20201227_sample1.png" | relative_url}})<br/><br/>
 
-고칠 것이 없다면 아래와 같이 통과하여 Success 합니다.<br/>
+나름 친절하게 어느 코드 라인에서 틀렸는지 알려주며,<br/>
+그 옆에 괄호로 왜 틀렸는지도 알려줍니다.<br/><br/>
+
+다시 다 수정하고 고칠 것이 없다면 아래와 같이 통과하여 Success 합니다.<br/>
 
 ![image]({{ "/assets/img/post/20201227_sample2.png" | relative_url}})<br/>
 
 <br/><br/><br/>
 
-### 2. Commit시 Ktlint 체크 적용하기 (Git hook)
+## 2. Commit시 Ktlint 체크 적용하기 (Git hook) 🎣
 
 매번 수동으로 체크할수는 없겠죠?<br/>
 아래와 같이 git-hook에 적용하고 나면 commit 할 때마다 ktlint를 체크하여<br/>
@@ -216,6 +222,16 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 ./gradlew addKtlintCheckGitPreCommitHook
 ```
 
+<br/><br/>
+
+성공적으로 적용되었다면 **어디에서 commit**을 하더라도 <br/>
+반드시 ktlint가 통과되어야 commit이 됩니다.<br/>
+
+![image]({{ "/assets/img/post/20201227_error.png" | relative_url}})
+> 소스트리에서 commit 해도 마찬가지로 ktlint가 통과되어야만 합니다.
+
+<br/><br/><br/>
+
 #### ⚠️ 잠깐! 혹시 에러가 나진 않나요?
 
 > Execution failed for task ':addKtlintCheckGitPreCommitHook'.
@@ -227,7 +243,9 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 mkdir .git/hooks
 ```
 
-### 3. Android Studio formatter를 Ktlint에 맞게 설정 하기
+<br/><br/><br/><br/>
+
+## 3. Android Studio formatter를 Ktlint에 맞게 설정 하기 🛠
 
 이제부터는 수시로 `reformat code`를 호출하게 될 텐데, <br/>
 안드로이드 스튜디오가 kotlin convention을 따르지 않아서 <br/>
@@ -247,3 +265,47 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 ```
 
 <br/><br/><br/><br/>
+
+# 주로 틀리는 것들 📌
+
+주로 틀리는 것들이 있는데, 이 부분은 Android Studio 설정을 조금만 바꿔주면 해결됩니다.
+
+<br/><br/>
+
+## 1. 파일의 끝은 new-line 으로 끝나야 합니다.
+
+파일의 끝은 반드시 **줄내림으로 끝내야 합니다.**<br/><br/>
+
+그 이유는 콘솔에서 diff나 git 등으로 코드를 보거나 할 때 줄내림이 없으면<br/>
+마지막 줄이 콘솔에서는 한줄로 보여서 문제가 되기 때문이라고 합니다.<br/><br/>
+
+**Preferences > Editor > General** 페이지의 `Save Files` 항목에서<br/>
+
+`Ensure an empty line at the end of a file on save`를 체크하세요.<br/><br/>
+
+![image]({{ "/assets/img/post/20201227_eof.png" | relative_url}})<br/>
+
+<br/><br/><br/>
+## 2. Wild-card imports 
+
+**Preferences > Editor > Code Style > Kotlin > Imports** 항목에서<br/>
+
+`Top-level symbols`와 `Java Statics and Enum Members` 를 모두<br/>
+
+`Use Single name import`로 고쳐주시면 됩니다.<br/>
+
+![image]({{ "/assets/img/post/20201227_import.png" | relative_url}})<br/>
+
+<br/><br/><br/>
+
+## 3. Continuation indent (이어지는 들여쓰기)
+
+Android Studio에서 줄이 이어지는 경우 들여쓰기가 8칸이 기본값이기 때문에 수정이 필요합니다. <br/>
+
+**Preferences > Editor > Code Style > Kotlin > Tabs and Indents** 항목에서<br/>
+
+`Continuation indent` 항목을 **4로 수정해주세요.**<br/>
+
+![image]({{ "/assets/img/post/20201227_ind.png" | relative_url}})<br/>
+
+<br/><br/><br/>
