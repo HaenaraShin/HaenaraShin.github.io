@@ -234,7 +234,7 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 
 #### ⚠️ 잠깐! 혹시 에러가 나진 않나요?
 
-> Execution failed for task ':addKtlintCheckGitPreCommitHook'.
+> Execution failed for task ':addKtlintCheckGitPreCommitHook'.<br/>
 > java.io.IOException: No such file or directory
 
 만약 위와 에러가 발생한다면 .git 디렉토리 하위에 hooks 가 없어서 발생하는 것이니 hooks 디렉토리를 생성합니다. 
