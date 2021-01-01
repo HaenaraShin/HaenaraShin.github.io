@@ -15,6 +15,8 @@ categories: Kotlin, Android, ktlint
 
 Ktlint는 Kotlin을 위한 Lint로 코드의 coding convention, style guide 준수 여부를 검사해주는 정적 분석 툴입니다. <br/><br/>
 
+기본으로 [Kotlin Coding Convention](https://kotlinlang.org/docs/reference/coding-conventions.html)을 따르고 있으며<br/>
+
 ktlint를 적용하여 프로젝트 내의 코드 스타일을 통일하도록 **⚠️강제⚠️**할 수 있습니다.<br/><br/>
 아래에서 설명하듯이 **git commit**시에 반드시 ktlint를 통과하도록 강제할 수 있어서<br/>
 팀내에서 코드 스타일을 서로 맞추고 싶다면 ktlint 사용을 적극 추천드립니다.<br/><br/>
@@ -307,5 +309,13 @@ Android Studio에서 줄이 이어지는 경우 들여쓰기가 8칸이 기본�
 `Continuation indent` 항목을 **4로 수정해주세요.**<br/>
 
 ![image]({{ "/assets/img/post/20201227_ind.png" | relative_url}})<br/>
+
+<br/><br/><br/>
+
+# 😎 예제가 필요하시다면...
+
+혹시 이 글로만 이해가 잘 안되고 예제 프로젝트가 필요하시다면<br/>
+제가 미리 만들어둔 프로젝트가 있으니 아래 링크로 확인해보세요<br/><br/>
+**[https://github.com/HaenaraShin/Ktlint-Android-Sample](https://github.com/HaenaraShin/Ktlint-Android-Sample)**
 
 <br/><br/><br/>
