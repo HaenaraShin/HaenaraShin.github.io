@@ -4,7 +4,7 @@ title:  "[라뗴칼럼] 백부장님의 2가지 가르침"
 feature-img: "assets/img/post/20210221_thumb.jpeg"
 thumbnail: "assets/img/post/20210221_thumb.jpeg"
 description: "라뗴칼럼 그 첫번째! 백부장님의 2가지 가르침을 공유합니다."
-date:   2021-1-1 22:42:00 +0900
+date:   2021-02-21 22:42:00 +0900
 categories: Latte
 ---
 
