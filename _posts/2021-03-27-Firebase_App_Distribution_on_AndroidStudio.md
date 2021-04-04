@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "AndroidStudio에서 Firebase 앱 내부배포를 한번의 클릭으로 해결하기"
+title:  "AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기"
 feature-img: "assets/img/post/20210327_thumb.jpeg"
 thumbnail: "assets/img/post/20210327_thumb.jpeg"
-description: "안드로이스 스튜디오에서 Firebase 내부배포 자동화 하기"
+description: "안드로이스 스튜디오에서 Firebase 내부배포 플러그인과 git 커맨드를 이용한 배포 프로세스를 간략화 하는 방법을 소개합니다."
 date:   2021-3-27 14:11:00 +0900
 categories: Android,Firebase
 ---
@@ -59,7 +59,8 @@ plugins {
 ### 빌드 타입에 Firebase 배포 설정
 
 플러그인 적용이 완료되었다면 이제 출시노트와 대상 테스터를 설정합니다.<br/>
-빌드타입 또는 `ProductFlavor`에 `firebaseAppDistribution` 설정을 추가합니다.<br/>
+`buildTypes` 또는 `ProductFlavor`에 `firebaseAppDistribution` 설정을 추가합니다.<br/>
+
 출시노트와 테스터는 String 객체로 직접 입력할 수도 있고 파일을 참조하도록 할 수도 있습니다.<br/>
 테스터의 경우는 "," 단위로 여러명을 지정할 수도 있고 아예 그룹이름 단위로 선택할 수도 있습니다.<br/>
 아래 예시에서는 debug 빌드일 때 프로젝트 내의 `RELEASE_NOTE.txt`파일을 참조하도록 하였습니다.<br/>
