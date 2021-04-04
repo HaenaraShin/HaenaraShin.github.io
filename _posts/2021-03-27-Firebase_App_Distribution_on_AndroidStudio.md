@@ -82,6 +82,8 @@ android {
 
 좀 더 자세한 설정 및 활용방법은 [공식문서](https://firebase.google.com/docs/app-distribution/android/distribute-gradle)를 참조하세요.<br/>
 
+<br/><br/><br/><br/>
+
 ### 배포 해보기
 
 ![launch]({{ "/assets/img/post/20210327_01.jpeg" | relative_url}})
@@ -94,7 +96,7 @@ android {
 3. Firebase CLI를 사용하여 로그인
 
 인증하는 방법이 몇가지 있겠지만 커맨라인이 익숙하신 분들이라면 CLI를 추천드립니다.<br/>
-나머지 인증 방법이 궁금하시다면 [공식문서](https://firebase.google.com/docs/app-distribution/android/distribute-gradle#step_2_authenticate_with_firebase)를 참조하세요.<br/>
+나머지 인증 방법이 궁금하시다면 [공식문서](https://firebase.google.com/docs/app-distribution/android/distribute-gradle#step_2_authenticate_with_firebase)를 참조하세요.<br/><br/><br/>
 
 #### CLI로 인증하기
 
@@ -115,6 +117,8 @@ $ firebase login
 
 ![auth]({{ "/assets/img/post/20210327_auth.png" | relative_url}})
 
+<br/><br/><br/>
+
 #### 이젠 정말 배포 해보기
 
 플러그인이 정상적으로 설정되었다면 gradle task 목록에 다음과 같이 태스크가 추가 되어 있는 것을 확인할 수 있습니다.<br/>
@@ -123,17 +127,20 @@ $ firebase login
 
 해당 태스크를 실행하여 실제로 파이어베이스 콘솔에 앱이 잘 배포되는지 확인합니다.<br/>
 
+<br/><br/><br/><br/><br/>
 
-## 🤔 결국 출시노트는 일일히 적어야 하는거 아냐?
+
+## 🤔 그런데 결국 출시노트는 일일히 적어야 하는거 아냐?
 
 저는 이쯤에서 이런 고민을 했습니다.<br/>
-<br/><br/>
+<br/>
 😠 *결국 출시노트는 여전히 손으로 다 적어야 하네*<br/>
 😣 *버전도 매번 일일히 올려야 하는 거잖아*<br/>
 😩 *그냥 웹에서 하던걸 안드로이드 스튜디오로 가져온게 다라면 그게 무슨 의미가 있을까?*<br/>
 <br/>
 플러그인을 적용하면 분명 콘솔에 접속 할 필요도, APK를 직접 업로드 할 필요도 없어서 간편한 것은 사실이지만<br/>
-아쉬운 점은 출시노트를 매번 일일히 수동으로 적고 버전도 매번 하나씩 올려주어야 한다는 것입니다.<br/>
+아쉬운 점은 **출시노트를 매번 일일히 수동**으로 적고 **버전도 매번 하나씩 올려주어야 한다**는 것입니다.<br/><br/>
+
 하지만 기왕 자동화를 시작할꺼면 끝까지 해야겠지요? 🤩<br/>
 결과적으로 저는 버전관리와 출시노트를 자동으로 생성하는 것 까지 한세트로 묶어 자동화를 시도합니다.<br/>
 <br/><br/>
@@ -189,7 +196,7 @@ android {
 ```
 
 `version.properties`의 버전을 하나씩 올리고 새로 저장하는 함수는 아래와 같습니다.<br/>
-해당 함수도 `build.groovy(app)`에 추가해주세요.<br/>
+해당 함수도 `build.gradle(app)`에 추가해주세요.<br/>
 
 ```groovy
 def updateVersionProperties(name, code) {
@@ -200,6 +207,8 @@ def updateVersionProperties(name, code) {
             "version_code=${code + 1}"
 }
 ```
+
+<br/><br/><br/>
 
 ## Git Log로 출시노트 만들기
 
@@ -217,11 +226,12 @@ git log $(git describe --tags --abbrev=0)..HEAD --oneline --format="%s"
 <br/>
 따라서 <br/>
 
-1. 마지막 태그 버전 가져오기
-2. 특정 버전부터 최신까지의 로그 출력하기 
+#### 1. 마지막 태그 버전 가져오기
+
+#### 2. 특정 버전부터 최신까지의 로그 출력하기 
 
 이렇게 두가지 커맨드를 각각 함수로 호출해주고 출력한 내용을 `RELEASE_NOTE.txt` 파일로 저장해야 합니다.<br/>
-아래의 함수가 두가지 동작을 처리하는 함수인데 이 역시 `build.gradle(app)`에 추가합니다.<br/>
+아래의 함수가 두가지 동작을 처리하는 함수인데 이 역시 `build.gradle(app)`에 추가합니다.<br/><br/>
 
 ```groovy
 def createReleaseNote() {
@@ -251,7 +261,7 @@ def createReleaseNote() {
 
 > RELEASE_NOTE.txt 파일은 .gitignore 파일에 추가해서 커밋에 추가되지 않도록 하는 것을 권장합니다.
 
-<br/>
+<br/><br/>
 
 ## 버전별 Git Tag 남기기
 
@@ -271,6 +281,8 @@ def gitCommitAndTagVersion(releaseNote, verName) {
     }
 }
 ```
+
+<br/><br/>
 
 ## 빌드 및 배포 하기
 
@@ -306,7 +318,7 @@ dependsOn으로 해당 태스크가 실행되기 전에 어떤 task가 실행될
 
 task 1, 2를 순서대로 실행합니다.<br/>
 
-> 만약 RELASE_NOTE를 수정해서 배포하고 싶다면 
+> 만약 RELASE_NOTE를 수정해서 배포하고 싶다면 <br/>
 > task1 실행 이후 수동으로 RELASE_NOTE를 수정하신 다음 task2 실행하시면 됩니다.
 
 <br/>
