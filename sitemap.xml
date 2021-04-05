@@ -1,32 +1,152 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{ site.url }}{{ post.url }}.html</loc>
-        {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% else %}
-        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-        {% endif %}
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-        {% if post.sitemap.changefreq == null %}
-        <changefreq>weekly</changefreq>
-        {% else %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-        {% endif %}
 
-        {% if post.sitemap.priority == null %}
-        <priority>0.5</priority>
-        {% else %}
-        <priority>{{ post.sitemap.priority }}</priority>
-        {% endif %}
+<url>
+  <loc>https://haenarashin.github.io/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/about/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/search/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/tags/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/android,/kotlin,/ktor/2021/03/21/Ktor_tutorial.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/latte/2021/02/21/Latte_back.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/android,/security/2021/01/24/brick.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/daily/2020/12/31/Reviewing_2020.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/blog/page2/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/blog/page3/</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/safe</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/circus</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/cake</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/ninja</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/gitlecture</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/daily/2019/12/31/Reviewing_2019.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/kotlin,/android,/ktlint/2020/12/27/Ktlint-on-your-project.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/tech,tdd/2020/11/29/How-to-tdd.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/daily/2020/11/15/swift_review.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/daily/2020/11/15/Geulddo-starting.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/android/2020/10/07/decomplie-jar.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/android/2020/10/03/Tagging-git-on-APK.html</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/hanoi</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/jekyllblog</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/tictactoe</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://haenarashin.github.io/portfolio/submarine</loc>
+  <lastmod>2021-04-04T08:47:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
 
-    </url>
-    {% endfor %}
+
 </urlset>
