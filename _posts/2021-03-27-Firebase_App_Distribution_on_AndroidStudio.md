@@ -283,6 +283,11 @@ def gitCommitAndTagVersion(releaseNote, verName) {
 }
 ```
 
+<br/>
+
+> 혹시 해당 기능이 동작 하지 않는다면 터미널이나 커맨드 콘솔에서 git 동작하는지 우선 확인해야 합니다. <br/>
+> 윈도우의 환경변수나 맥/리눅스의 PATH에 git 경로를 추가해주시면 해결할 수 있습니다.
+
 <br/><br/>
 
 ## 빌드 및 배포 하기
