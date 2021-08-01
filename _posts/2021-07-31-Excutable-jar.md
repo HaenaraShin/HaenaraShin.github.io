@@ -9,6 +9,9 @@ categories: kotlin
 ---
 
 이번 포스팅에서는 코틀린으로 실행가능한 JAR파일을 만드는 방법을 소개하고자 합니다.<br/>
+
+![jar]({{ "/assets/img/post/20210731_01.png" | relative_url}})<br/>
+
 <br/>
 개인적으로는 코틀린을 최대한 활용하고자, 업무용 스크립트도 코틀린으로 작성하는 편입니다. <br/>
 그러기위해서는 결국 코틀린으로 빌드한 실행파일이 필요합니다.<br/>
@@ -33,7 +36,9 @@ IDE에서 직접 실행하면 다음과 같이 잘 실행되는 것을 확인할
 
 ![hello_world!]({{ "/assets/img/post/20210731_05.png" | relative_url}})<br/>
 
-그럼 이제 이 프로그램을 다른 곳에서도 실행할 수 있도록 jar 파일로 생성해봅시다.
+<br/><br/><br/>
+
+그럼 이제 이 프로그램을 다른 곳에서도 실행할 수 있도록 jar 파일로 생성해봅시다.<br/>
 jar 파일로 만드는 것은 우측 gradle 탭의 태스크에서도 실행 가능합니다.<br/>
 
 ![gralde_task_jar]({{ "/assets/img/post/20210731_06.png" | relative_url}})<br/>
@@ -43,14 +48,14 @@ jar 파일로 만드는 것은 우측 gradle 탭의 태스크에서도 실행 �
 ```bash
 $ java -jar {jar 파일 이름}
 ```
-<br/><br/><br/>
+<br/><br/><br/><br/>
 
-문제는...
-jar 파일을 생성하고 실행하면 다음과 같이 나오고 제대로 실행되지 않습니다.😱😱😱<br/>
+문제는...<br/>
+jar 파일을 생성하고 실행하면 다음과 같이 나오고 제대로 실행되지 않습니다.😱😱😱<br/><br/>
 
 > `no main manifest attribute, in ExecutableJarExample-1.0-SNAPSHOT.jar`
 
-<br/><br/>
+<br/><br/><br/>
 
 이 문제는 메인클래스를 찾지 못해서 발생하는 문제로<br/>
 아래와 같이 `build.gradle`파일에 manifest 설정을 jar 태스크에 추가해주면 됩니다. <br/>
@@ -63,20 +68,25 @@ jar {
     archiveName 'HelloWrold.jar' // jar 파일 이름
 }
 ```
+<br/><br/><br/>
 
+이와 별개로 제가 예전에 삽질했던 문제가 있어서 첨언하자면<br/>
 혹시 gradle 버전이 낮거나 설정이 안맞으면 아래와 같이 에러가 발생할 수 있습니다.<br/>
-저는 예전에 이 부분 때문에 상당히 삽질했던 기억이 나네요..😢<br/>
+저는 예전에 이 부분 때문에 오랫동안 삽질했던 기억이 나네요..😢<br/>
 
 > `Caused by: java.lang.ClassNotFoundException: kotlin.jvm.internal.Intrinsics`
 
+<br/><br/>
 이 경우에는 jar 빌드 스크립트에 아래 내용을 추가합니다. <br/>
 
 ```groovy
 jar {
     ...중략...
-    from { configurations.default.collect { it.isDirectory() ? it : zipTree(it) } }
+    from { configurations.default.collect { it.isDirectory()? it : zipTree(it) } }
 }
 ```
+
+<br/><br/><br/><br/>
 
 이것을 이용하여 안드로이드 프로젝트에 java/kotlin library 을 생성하면 <br/>안드로이드 스튜디오에서도 데스크탑용 앱 또는 jar 스크립트를 만들 수 있습니다.<br/>
 
