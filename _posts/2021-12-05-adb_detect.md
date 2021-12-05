@@ -12,14 +12,20 @@ categories: Kotlin
 
 ![change]({{ "/assets/img/post/20211205_01.jpeg" | relative_url}})<br/>
 
-ADB를 이용하여 다양한 명령어 조작과 shell 스크립트 동작을 사용할 수 있어서</br/>
+## ADB란?
+
+ADB는 Android Debug Bridge의 약자로 <br/>
+개발자가 안드로이드 디버깅을 위해 단말에 USB 또는 TCP프로토콜로 연결하여 사용하는 <br/>
+디버깅용 툴 프로그램 입니다.<br/>
+<br/>
+ADB를 이용하여 다양한 명령어 조작과 shell 스크립트 동작을 사용할 수 있어서<br/>
 경우에 따라서는 안드로이드 앱에서 여러가지 보안 정책을 보안상의 이유로 ADB 연결을 막는 경우가 있습니다. <br/>
 보통은 크게 신경쓰지 않지만 일부 높은 보안수준이 요구되는 금융앱의 경우<br/>
 실제로 이 ADB 연결을 막기도 합니다.<br/>
 <br/>
 
 ![sample]({{ "/assets/img/post/20211205_1.jpeg" | relative_url}})<br/>
-> 부산은행 썸뱅크 앱에서 ADB 연결시 나오는 메세지
+> 실제 부산은행 썸뱅크 앱에서 ADB 연결시 나오는 메세지
 
 사실 원리는 간단합니다.<br/>
 <br/>
