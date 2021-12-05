@@ -59,6 +59,6 @@ def changeAPKName(variant) {
 
 그럼 아래와 같은 형식으로 바뀝니다.
 
-![sample_result](http://heavybros.dothome.co.kr/wp-content/uploads/2020/04/apk-sample.jpg)
+![sample_result]({{ "/assets/img/post/20201003_01.jpeg" | relative_url}})<br/>
 
 만약 다른 방식을 원한다면 changeAPKName 함수를 수정해보세요.
