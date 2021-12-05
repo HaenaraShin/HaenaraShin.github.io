@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Android 앱에서 ADB 연결 막기"
-feature-img: "assets/img/post/2021205_thumb.jpeg"
-thumbnail: "assets/img/post/2021205_thumb.jpeg"
+feature-img: "assets/img/post/20211205_thumb.jpeg"
+thumbnail: "assets/img/post/20211205_thumb.jpeg"
 description: "Android 앱에서 ADB연결을 감지하고 차단하는 방법을 소개합니다."
 date:   2021-12-05 21:00:00 +0900
 categories: Kotlin
@@ -10,15 +10,15 @@ categories: Kotlin
 
 # ADB와 보안
 
-![change]({{ "/assets/img/post/2021205_01.jpeg" | relative_url}})<br/>
+![change]({{ "/assets/img/post/20211205_01.jpeg" | relative_url}})<br/>
 
-ADB를 이용하여 다양한 명령어 조작과 shell 스크립트 동작을 사용할 수 있어서
+ADB를 이용하여 다양한 명령어 조작과 shell 스크립트 동작을 사용할 수 있어서</br/>
 경우에 따라서는 안드로이드 앱에서 여러가지 보안 정책을 보안상의 이유로 ADB 연결을 막는 경우가 있습니다. <br/>
 보통은 크게 신경쓰지 않지만 일부 높은 보안수준이 요구되는 금융앱의 경우<br/>
 실제로 이 ADB 연결을 막기도 합니다.<br/>
 <br/>
 
-![sample]({{ "/assets/img/post/20210829_1.jpeg" | relative_url}})<br/>
+![sample]({{ "/assets/img/post/20211205_1.jpeg" | relative_url}})<br/>
 > 부산은행 썸뱅크 앱에서 ADB 연결시 나오는 메세지
 
 사실 원리는 간단합니다.<br/>
@@ -144,7 +144,6 @@ class UsbDebugReceiver : BroadcastReceiver() {
 > ⚠️⚠️⚠️주의할 점⚠️⚠️⚠️<br/>
 이 USB 이벤트는 수초 안에 여러번 발생하는 경우가 있으니<br/>
 방어코드를넣지 않으면 여러번 실행될 수 있습니다!!!<br/>
-<br/>
 
 리시버를 실제 Application 또는 Activity 에서 등록하는 코드는 아래와 같습니다.<br/>
 
@@ -168,7 +167,7 @@ Background로  내리갈 땐 리시버 해지가 필요할 수도 있습니다.<
 
 ## 4. 🚀 예제 실행
 
-![sample]({{ "/assets/img/post/20210829_03.gif" | relative_url}})<br/>
+![sample]({{ "/assets/img/post/20211205_03.gif" | relative_url}})<br/>
 
 USB을 연결하자 마자 다이얼로그를 띄우고 앱을 종료시켜버립니다.<br/>
 
@@ -178,7 +177,7 @@ USB을 연결하자 마자 다이얼로그를 띄우고 앱을 종료시켜버�
 
 소스코드와 예제는 아래 URL에서 확인하실 수 있습니다.<br/>
 
-![sample_code]({{ "/assets/img/post/20210829_02.png" | relative_url}})<br/>
+![sample_code]({{ "/assets/img/post/20211205_02.png" | relative_url}})<br/>
 
 
 https://github.com/HaenaraShin/AdbDetector<br/>
@@ -186,12 +185,14 @@ https://github.com/HaenaraShin/AdbDetector<br/>
 
 ## 6.  🎬 그리고 반전…
 
-사실 앱수준에서는 ADB 연결을 완전히 막을 방법이 없습니다…<br/>
-왜냐면 ADB는 USB연결 없이 WiFi 로도 연결 가능하기 때문입니다..!!😱😱😱<br/>
+이제와서 반전은...<br/>
+사실 앱수준에서 근본적인 레벨에서 ADB를 막을 방법은 없습니다.<br/>
+왜냐면 지금까지 설명한 것은 USB연결을 통한 ADB는 막을 수 있어도<br/>
+WiFi를 통한 무선 ADB 연결을 막을 수는 없기 때문입니다..!!😱😱😱<br/>
 이 때문에 사실 USB 디버깅은 대부분 신경 쓰지 않습니다….<br/>
 
 <br/>
-하지만 일전에 취약점 점검을 위해 모바일 앱 모의해킹을 진행한 적이 있는데<br/>
+다만 일전에 취약점 점검을 위해 모바일 앱 모의해킹을 진행한 적이 있는데<br/>
 담당자가 WiFi ADB를 모르는 사람이었습니다. (100% 실화)<br/>
 <br/>
 따라서 꼭 의미 없는 것만은 아닐지도 모르겠습니다. <br/><br/>
