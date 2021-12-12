@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      
+        
+        <url>
+          <loc>http://localhost:4000/kotlin/2021/12/05/adb_detect.html</loc>
+          
+            <lastmod>2021-12-05T21:00:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/developer/2021/11/07/jb.html</loc>
+          
+            <lastmod>2021-11-07T23:00:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/kotlin/2021/08/29/Why_not_for_loop.html</loc>
+          
+            <lastmod>2021-08-29T13:00:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/tdd,/test/2021/08/07/Why_need_unit_test.html</loc>
+          
+            <lastmod>2021-08-07T22:11:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html</loc>
+          
+            <lastmod>2021-07-31T21:11:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/daily/2021/05/02/Reviewing_guelddo.html</loc>
+          
+            <lastmod>2021-05-02T21:11:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html</loc>
+          
+            <lastmod>2021-03-27T14:11:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/android,/kotlin,/ktor/2021/03/21/Ktor_tutorial.html</loc>
+          
+            <lastmod>2021-03-21T12:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/latte/2021/02/21/Latte_back.html</loc>
+          
+            <lastmod>2021-02-21T22:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/android,/security/2021/01/24/brick.html</loc>
+          
+            <lastmod>2021-01-24T12:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/daily/2020/12/31/Reviewing_2020.html</loc>
+          
+            <lastmod>2020-12-31T22:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/kotlin,/android,/ktlint/2020/12/27/Ktlint-on-your-project.html</loc>
+          
+            <lastmod>2020-12-27T22:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html</loc>
+          
+            <lastmod>2020-12-13T22:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/tech,tdd/2020/11/29/How-to-tdd.html</loc>
+          
+            <lastmod>2020-11-29T16:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/daily/2020/11/15/swift_review.html</loc>
+          
+            <lastmod>2020-11-15T23:15:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/daily/2020/11/15/Geulddo-starting.html</loc>
+          
+            <lastmod>2020-11-15T19:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/android/2020/10/07/decomplie-jar.html</loc>
+          
+            <lastmod>2020-10-07T23:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html</loc>
+          
+            <lastmod>2020-10-03T17:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+        
+        <url>
+          <loc>http://localhost:4000/daily/2019/12/31/Reviewing_2019.html</loc>
+          
+            <lastmod>2019-12-31T14:42:00+09:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+        </url>
+        
+      
+    </urlset>

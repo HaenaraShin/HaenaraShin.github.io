@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.6
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Androbin Dev Blog" href="http://localhost:4000/feed.xml"/>
+    
+    
+
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/pexels/android-oreo-1.png">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Android APK 이름에 Git 리비전 태그 붙이기 | Androbin Dev Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Android APK 이름에 Git 리비전 태그 붙이기" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설명합니다." />
+<meta property="og:description" content="Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설명합니다." />
+<link rel="canonical" href="http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html" />
+<meta property="og:url" content="http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html" />
+<meta property="og:site_name" content="Androbin Dev Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-03T17:42:00+09:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-03T17:42:00+09:00","dateModified":"2020-10-03T17:42:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html"},"url":"http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html","description":"Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설명합니다.","@type":"BlogPosting","headline":"Android APK 이름에 Git 리비전 태그 붙이기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Androbin Dev Blog" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Android APK 이름에 Git 리비전 태그 붙이기">
+    <meta name="twitter:description" content="Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설염합니다.안드로이드에서 처음 앱을 빌드하면 apk는 보통app-debug.apk 또는 app-release.apk가 보통 나옵니다.버전관리를 위해 APK 이름에 빌드 날짜와 git 리비전을 남기...">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/pexels/android-oreo-1.png">
+    <meta name="twitter:image:alt" content="Android APK 이름에 Git 리비전 태그 붙이기">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/avatar.png" />
+		</a>
+        
+        <a class="site-title" aria-label="Androbin Dev Blog" href="/">
+        Androbin Dev Blog
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About Me" title="About Me" href="/about/">
+                     About Me 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="Android+APK+%EC%9D%B4%EB%A6%84%EC%97%90+Git+%EB%A6%AC%EB%B9%84%EC%A0%84+%ED%83%9C%EA%B7%B8+%EB%B6%99%EC%9D%B4%EA%B8%B0" class="title">Android APK 이름에 Git 리비전 태그 붙이기</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      October 3, 2020
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <p>Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설염합니다.</p>
+
+<p>안드로이드에서 처음 앱을 빌드하면 apk는 보통</p>
+
+<p><code class="language-plaintext highlighter-rouge">app-debug.apk</code> 또는 <code class="language-plaintext highlighter-rouge">app-release.apk</code></p>
+
+<p>가 보통 나옵니다.</p>
+
+<p>버전관리를 위해 APK 이름에 빌드 날짜와 git 리비전을 남기고 싶다면
+아래와 같이 작성해보세요.</p>
+
+<h1 id="1-앱-수준의-buildgradleapp">1. 앱 수준의 build.gradle(app)</h1>
+
+<p>앱 수준의 build.gradle(app) 에서 android{ } 안에 아래와 같이 추가 하면 됩니다</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">android</span><span class="o">.</span><span class="na">applicationVariants</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span> <span class="n">variant</span> <span class="o">-&gt;</span>
+        <span class="n">changeAPKName</span><span class="o">(</span><span class="n">variant</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h1 id="2--changeapkname-함수-추가">2.  changeAPKName 함수 추가</h1>
+
+<p>그 다음 android{ }밖에 changeAPKName 함수를 추가합니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">changeAPKName</span><span class="o">(</span><span class="n">variant</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">variant</span><span class="o">.</span><span class="na">outputs</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span> <span class="n">output</span> <span class="o">-&gt;</span>
+        <span class="kt">def</span> <span class="n">apkName</span> <span class="o">=</span> <span class="o">{</span>
+            <span class="kt">def</span> <span class="n">appName</span> <span class="o">=</span> <span class="s1">'sample'</span>
+            <span class="kt">def</span> <span class="n">buildType</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s1">'-'</span><span class="o">).</span><span class="na">last</span><span class="o">()</span> <span class="c1">// debug or release</span>
+            <span class="kt">def</span> <span class="n">currentDate</span> <span class="o">=</span> <span class="o">{</span> <span class="k">return</span> <span class="k">new</span> <span class="n">Date</span><span class="o">().</span><span class="na">format</span><span class="o">(</span><span class="s1">'yyyyMMdd'</span><span class="o">)</span> <span class="o">}</span>
+            <span class="kt">def</span> <span class="n">gitHash</span> <span class="o">=</span> <span class="o">{</span> <span class="o">-&gt;</span>
+                <span class="kt">def</span> <span class="n">stdout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayOutputStream</span><span class="o">()</span>
+                <span class="n">exec</span> <span class="o">{</span>
+                    <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'rev-parse'</span><span class="o">,</span> <span class="s1">'--verify'</span><span class="o">,</span> <span class="s1">'--short'</span><span class="o">,</span> <span class="s1">'HEAD'</span>
+                    <span class="n">standardOutput</span> <span class="o">=</span> <span class="n">stdout</span>
+                <span class="o">}</span>
+                <span class="k">return</span> <span class="n">stdout</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">trim</span><span class="o">()</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="s2">"${appName}_${buildType}_${currentDate()}_${gitHash()}.apk"</span>
+        <span class="o">}</span>
+        <span class="n">outputFileName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">apkName</span><span class="o">())</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s1">'APK FILE NAME : '</span> <span class="o">+</span> <span class="n">apkName</span><span class="o">())</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>그럼 아래와 같은 형식으로 바뀝니다.</p>
+
+<p><img src="/assets/img/post/20201003_01.jpeg" alt="sample_result" /><br /></p>
+
+<p>만약 다른 방식을 원한다면 changeAPKName 함수를 수정해보세요.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fandroid%2F2020%2F10%2F03%2FTagging-git-on-APK.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Android+APK+%EC%9D%B4%EB%A6%84%EC%97%90+Git+%EB%A6%AC%EB%B9%84%EC%A0%84+%ED%83%9C%EA%B7%B8+%EB%B6%99%EC%9D%B4%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fandroid%2F2020%2F10%2F03%2FTagging-git-on-APK.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html&title=Android+APK+%EC%9D%B4%EB%A6%84%EC%97%90+Git+%EB%A6%AC%EB%B9%84%EC%A0%84+%ED%83%9C%EA%B7%B8+%EB%B6%99%EC%9D%B4%EA%B8%B0%20%7C%20Androbin+Dev+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=Android+APK+%EC%9D%B4%EB%A6%84%EC%97%90+Git+%EB%A6%AC%EB%B9%84%EC%A0%84+%ED%83%9C%EA%B7%B8+%EB%B6%99%EC%9D%B4%EA%B8%B0%20%7C%20Androbin+Dev+Blog&body=:%20http://localhost:4000/android/2020/10/03/Tagging-git-on-APK.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list"></div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haenara';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)" href="/android/2020/10/07/decomplie-jar.html">
+            <p>Previous post</p>
+            JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="신해나라의 2019년 회고" href="/daily/2019/12/31/Reviewing_2019.html">
+            <p>Next post</p>
+            신해나라의 2019년 회고
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>

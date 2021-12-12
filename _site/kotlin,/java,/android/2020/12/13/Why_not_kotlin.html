@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.6
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Androbin Dev Blog" href="http://localhost:4000/feed.xml"/>
+    
+    
+
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/post/20201213_02.jpeg">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유 | Androbin Dev Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kotlin 도입을 신중히 생각해봐야할 3가지 이유에 대해 소개합니다." />
+<meta property="og:description" content="Kotlin 도입을 신중히 생각해봐야할 3가지 이유에 대해 소개합니다." />
+<link rel="canonical" href="http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html" />
+<meta property="og:url" content="http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html" />
+<meta property="og:site_name" content="Androbin Dev Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-13T22:42:00+09:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-12-13T22:42:00+09:00","dateModified":"2020-12-13T22:42:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html"},"url":"http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html","description":"Kotlin 도입을 신중히 생각해봐야할 3가지 이유에 대해 소개합니다.","@type":"BlogPosting","headline":"당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Androbin Dev Blog" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유">
+    <meta name="twitter:description" content="  프로젝트에 Kotlin 도입 전 신중하게 고려해야 할 이유 3가지Kotlin 도입Kotlin은 Java와 마찬가지로 class파일로 바이트코드로 빌드가 가능하기 때문에 일반적인 경우에 결과물은 Java와 100% 호환된다고 할 수 있습니다.특히나 Android 진영에서는 다음 ...">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/post/20201213_02.jpeg">
+    <meta name="twitter:image:alt" content="당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/avatar.png" />
+		</a>
+        
+        <a class="site-title" aria-label="Androbin Dev Blog" href="/">
+        Androbin Dev Blog
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About Me" title="About Me" href="/about/">
+                     About Me 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image" >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="%EB%8B%B9%EC%8B%A0%EC%9D%98+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90+Kotlin%EC%9D%84+%EC%A0%81%EC%9A%A9%ED%95%98%EC%A7%80+%EB%A7%90%EC%95%84%EC%95%BC%ED%95%A0+3%EA%B0%80%EC%A7%80+%EC%9D%B4%EC%9C%A0" class="title">당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      December 13, 2020
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <blockquote>
+  <p>프로젝트에 Kotlin 도입 전 신중하게 고려해야 할 이유 3가지</p>
+</blockquote>
+
+<p><img src="/assets/img/post/20201213_01.jpg" alt="Kotlin" /></p>
+
+<h1 id="kotlin-도입">Kotlin 도입</h1>
+
+<p>Kotlin은 Java와 마찬가지로 class파일로 바이트코드로 빌드가 가능하기 때문에<br /> 
+일반적인 경우에 결과물은 Java와 100% 호환된다고 할 수 있습니다.<br /></p>
+
+<p>특히나 Android 진영에서는 다음 Kotlin은 필수처럼 여겨집니다.</p>
+
+<ul>
+  <li>2017년 : Kotlin <strong>Android 공식 언어</strong>로 채택 (Google I/O)</li>
+  <li>2019년 : <strong>Kotlin-First</strong> (코틀린 우선) 정책 발표</li>
+</ul>
+
+<p><br />
+모두들 코틀린이 좋은 이유는 구구절절 설명해주지만<br />
+코틀린을 왜 적용하지 말아야 하는지는 아무도 얘기해 주지 않아서 <br /><br /></p>
+
+<p>지금부터 <strong>아무도 얘기해주지 않는 코틀린 도입을 미뤄야 할 3가지 이유</strong>를 소개해보고자 합니다.<br /><br /><br /><br /></p>
+
+<h1 id="1-소스-코드-레벨의-솔루션">1. 소스 코드 레벨의 솔루션</h1>
+
+<p>Kotlin과 Java는 결과물이 호환이지, <strong>소스코드가 호환인 것은 아닙니다.🙅‍♂️</strong></p>
+
+<p>즉 빌드한 다음에야 Kotlin으로 만든 class를 Java에서도 참조할 수 있지만,<br />
+Java파일에 Kotlin 코드를 붙여넣는다고 동작하지는 않습니다.<br />
+(물론 갓텔리제이가 변환해주기는 합니다… <del>갓브레인즈 충성충성 ^^7</del>)<br /><br /></p>
+
+<p>만약 당신의 프로젝트에 <code class="language-plaintext highlighter-rouge">소스코드 취약점 분석</code>과 같은 <strong>소스코드 레벨</strong>의 정적분석 툴을 사용하고 있다면,<br />
+그리고 그 해당 솔루션이 아직 Kotlin을 지원하지 않는다면 아직은 고민해 볼 필요가 있습니다.<br /><br /></p>
+
+<p>실제로 올해초에 소스코드 취약점 분석 툴을 검토했었는데 <br />
+그 당시엔 Kotlin 미지원으로 인해 조금 난감했던 기억이 있습니다.🤦‍♂️</p>
+
+<p><br /><br /><br /></p>
+
+<h1 id="2-학습-비용-대비-성능">2. 학습 비용 대비 성능</h1>
+
+<p>사실 Kotlin을 쓴다고 해서 당신의 어플리케이션이 더 빨라지지는 않습니다.<br />
+그런데 굳이 성능이 좋아지지 않는데 힘들게 새로운 언어를 배우는 일은 가성비가 떨어지는 일입니다.<br /><br />
+개발자에게 새로운 프로그래밍 언어를 배운다는 사실은 굉장히 부담스러운 일이니까요. 그쵸?</p>
+
+<p><br /><br /><br /></p>
+
+<h1 id="3-채용난이도">3. 채용난이도</h1>
+
+<p>저도 실제로 경험해봤지만..<br />
+당신이 만약 영세한 기업을 다니고 있다면 코틀린을 할 줄 아는 개발자를 찾기란 참 어려울 수 있습니다.<br />
+코틀린 사용할 줄 아시는 분을 찾다가 인력충원이 늦어질 수도 있는 셈이죠.<br /><br />
+현실적으로는 빨리 Java라도 할 줄 아는 분을 뽑아서 협업하는 편이 나을 수 있습니다.<br /><br /></p>
+
+<p><br /><br /><br /><br /><br /><br /><br /><br /></p>
+
+<h1 id="결론-">결론 :</h1>
+
+<h2 id="코틀린-쓰세요-그냥-쓰세요">코틀린 쓰세요.. 그냥 쓰세요..</h2>
+
+<p><img src="/assets/img/post/20201213_03.jpeg" alt="why_not" /> <br /><br /></p>
+
+<blockquote>
+  <p>사실 이 포스팅은 당신에게 코틀린을 쓰지 말라고 권장하는 글이 아닙니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p>사실 제목은 페이크였고… <br />
+지금부터 다시 위 항목들을 조목조목 반박해보며 <br /><br />
+<code class="language-plaintext highlighter-rouge">Kotlin을 도입을 미루는 핑계에 대한 반박 3가지</code>를 말씀드립니다.</p>
+
+<p><br /><br /><br /></p>
+
+<h1 id="1-소스코드-레벨의-솔루션">1. 소스코드 레벨의 솔루션</h1>
+
+<p>사실 이미 정적 분석툴을 사용하고 있고 정말로 Kotlin을 지원하지 않는다면 곤란하긴 합니다.<br />
+하지만 적어도 국내 코드 취약점 분석 솔루션 제공업체들은 늦어도 올 하반기 Kotlin 지원 예정이었습니다.<br /><br /></p>
+
+<p>만약 그대로 어렵다면 아래와 같이 오픈소스 분석 툴을 사용하는 것도 방법이 될 수 있습니다. <br /><br /></p>
+
+<h2 id="detekt">Detekt</h2>
+
+<p><img src="/assets/img/post/20201213_detekt.png" alt="Detekt" /> <br /></p>
+
+<ul>
+  <li><a href="https://detekt.github.io/detekt/">Detekt 공식 페이지</a></li>
+  <li><a href="https://github.com/detekt/detekt">GitHub 링크</a></li>
+</ul>
+
+<p><br /></p>
+
+<p><a href="https://github.com/detekt/detekt">Detekt</a>는 오픈소스 Kotlin 정적 분석 툴로써 <br />
+Kotlin 소스 코드의 코드 스멜과 잠재적 위협요소들을 분석해줍니다. 
+<br /><br /></p>
+
+<p>물론 보안상의 기준은 상용 솔루션에 비하면 낮은 편이지만 오픈소스인걸 고려하면 도입은 충분히 검토해볼만 합니다.<br /><br /></p>
+
+<p>또한 Proguard, Allaotori 등 난독화 솔루션의 경우는 이미 대부분이 Kotlin을 지원하고 있는데<br />
+정말 중요한 솔루션이라면 대부분 이미 Kotlin을 지원하고 있다고 보셔도 무방합니다.</p>
+
+<p><br /><br /><br /><br /></p>
+
+<h1 id="2-학습-비용-대비-성능-1">2. 학습 비용 대비 성능</h1>
+
+<p>Kotlin을 쓴다고 해서 당신의 어플리케이션이 더 빨라지지는 않습니다.<br /><br />
+하지만 더욱 중요한 사실은 <br />
+<strong>Kotlin을 사용한다고 해서 당신의 어플리케이션이 느려지지 않습니다.</strong> <br /><br /></p>
+
+<p><a href="https://tv.kakao.com/channel/3150758/cliplink/391419295">if Kakao 2018 에서 발표</a>한 내용을 참고하자면 실제로 성능이 거의 동일하다고 합니다.<br /><br /></p>
+
+<p>즉, 코틀린 도입을 통해 성능을 유지하면서 생산성은 대폭 향상됩니다!!<br /><br /></p>
+
+<p>아까 참조한 <a href="https://tv.kakao.com/channel/3150758/cliplink/391419295">if Kakao 2018 에서 발표</a>에서도 60% 이상 코드가 줄어드는 것을 확인하실 수 있다고 하는데<br />
+Kotlin을 사용하면 훨씬 더 간결하고 명확한 코딩이 가능합니다.<br /><br /></p>
+
+<p>생산성과 관련해서는 다른 곳에서도 쉽게 찾을 수 있는 내용이니 나중에 기회가 된다면 설명하도록 하겠습니다.<br /><br /></p>
+
+<p>그리고.. 설마 개발자면서 새로운 언어 배우는게 그렇게 힘들고 싫겠어요? 😉</p>
+
+<p><br /><br /><br /><br /><br /></p>
+
+<h1 id="3-채용난이도-1">3. 채용난이도</h1>
+
+<p>네. 아직까지도 Kotlin을 다룰 줄 모르시는 분들도 많고, Java로 프로젝트를 진행하는 회사도 많습니다.<br />
+그치만 Kotlin을 도입한다면 앞으로 Kotlin을 할 줄 알거나, 최소한 학습하려는 사람과 일하게 될 것입니다.<br /><br /></p>
+
+<p>반대로 내가 Kotlin을 할 줄 모른다면, 나도 Kotlin을 다루는 회사로 갈 기회를 잃는 셈입니다.<br /><br /></p>
+
+<h1 id="재결론-">재결론 :</h1>
+
+<p><img src="/assets/img/post/20201213_summary.jpeg" alt="conclusion" /> <br /></p>
+<h2 id="kotlin-쓰세요-두번-쓰세요">Kotlin 쓰세요. 두번 쓰세요.</h2>
+
+<p><br /><br /></p>
+
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fkotlin%2C%2Fjava%2C%2Fandroid%2F2020%2F12%2F13%2FWhy_not_kotlin.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=%EB%8B%B9%EC%8B%A0%EC%9D%98+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90+Kotlin%EC%9D%84+%EC%A0%81%EC%9A%A9%ED%95%98%EC%A7%80+%EB%A7%90%EC%95%84%EC%95%BC%ED%95%A0+3%EA%B0%80%EC%A7%80+%EC%9D%B4%EC%9C%A0%20http%3A%2F%2Flocalhost%3A4000%2Fkotlin%2C%2Fjava%2C%2Fandroid%2F2020%2F12%2F13%2FWhy_not_kotlin.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html&title=%EB%8B%B9%EC%8B%A0%EC%9D%98+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90+Kotlin%EC%9D%84+%EC%A0%81%EC%9A%A9%ED%95%98%EC%A7%80+%EB%A7%90%EC%95%84%EC%95%BC%ED%95%A0+3%EA%B0%80%EC%A7%80+%EC%9D%B4%EC%9C%A0%20%7C%20Androbin+Dev+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=%EB%8B%B9%EC%8B%A0%EC%9D%98+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90+Kotlin%EC%9D%84+%EC%A0%81%EC%9A%A9%ED%95%98%EC%A7%80+%EB%A7%90%EC%95%84%EC%95%BC%ED%95%A0+3%EA%B0%80%EC%A7%80+%EC%9D%B4%EC%9C%A0%20%7C%20Androbin+Dev+Blog&body=:%20http://localhost:4000/kotlin,/java,/android/2020/12/13/Why_not_kotlin.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list"></div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haenara';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="코틀린 코드를 깔끔하게 정리하는 비결 ~ ktlint" href="/kotlin,/android,/ktlint/2020/12/27/Ktlint-on-your-project.html">
+            <p>Previous post</p>
+            코틀린 코드를 깔끔하게 정리하는 비결 ~ ktlint
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="내가 TDD를 실패했던 3가지 이유" href="/tech,tdd/2020/11/29/How-to-tdd.html">
+            <p>Next post</p>
+            내가 TDD를 실패했던 3가지 이유
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+   background-image: url('/assets/img/post/20201213_02.jpeg');
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>

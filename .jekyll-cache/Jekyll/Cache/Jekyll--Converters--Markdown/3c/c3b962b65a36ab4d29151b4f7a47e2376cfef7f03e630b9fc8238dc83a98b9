@@ -1,0 +1,341 @@
+I"n><blockquote>
+  <p>ktlint를 적용하는 방법 한방 정리</p>
+</blockquote>
+
+<h1 id="ktlint란"><code class="language-plaintext highlighter-rouge">ktlint</code>란?</h1>
+
+<p><img src="/assets/img/post/20201227_ktlint.png" alt="ktlint" /></p>
+
+<p>Ktlint는 Kotlin을 위한 Lint로 코드의 coding convention, style guide 준수 여부를 검사해주는 정적 분석 툴입니다. <br /><br /></p>
+
+<p>기본으로 <a href="https://kotlinlang.org/docs/reference/coding-conventions.html">Kotlin Coding Convention</a>을 따르고 있으며<br /></p>
+
+<p>ktlint를 적용하여 프로젝트 내의 코드 스타일을 통일하도록 <strong>⚠️강제⚠️</strong>할 수 있습니다.<br /><br />
+아래에서 설명하듯이 <strong>git commit</strong>시에 반드시 ktlint를 통과하도록 강제할 수 있어서<br />
+팀내에서 코드 스타일을 서로 맞추고 싶다면 ktlint 사용을 적극 추천드립니다.<br /><br /></p>
+
+<p><strong>💁‍♂️ 좀 더 자세한 소개는 아래의 ktlint 공식 페이지를 참고해보세요.</strong></p>
+
+<ul>
+  <li><a href="https://ktlint.github.io/">Ktlint Page</a></li>
+  <li><a href="https://github.com/jlleitschuh/ktlint-gradle">Ktlint Plugin GitHub Repository</a></li>
+</ul>
+
+<h2 id="ktlint-도입의-장점">ktlint 도입의 장점</h2>
+
+<p>프로젝트 내에서 코드 스타일이 <strong>강제로 통일</strong>되기 때문에 <br />
+서로 다른 스타일로 작성될 일이 없고 모든 프로젝트 내의 코드가 통일성이 생깁니다.<br /><br /></p>
+
+<p>이를 통해 코드 리뷰 시에 <strong>서로 다른 스타일로 인한 피로감</strong>이 줄어들고<br />
+<strong>가독성 저하</strong> 또는 <strong>불필요한 소통</strong>의 비용이 줄어들게 됩니다.<br /><br /></p>
+
+<p>현재 제가 직장에서 담당하고 있는 안드로이드 프로젝트에서 ktlint를 적용하고 있는데<br />
+실제로 서로 코드 스타일이 비슷해지다보니 다른 개발자의 PR 코드리뷰 때 좀 더 눈에도 잘 들어오고<br />
+한줄에 너무 길게 쓴다던가 하는 일도 없어지고<br />
+누가 언제 짠 코드이던 비슷하게 생겨서 어느 장단에 맞춰야 할지 고민할 일이 없어져서 좋습니다.<br />
+<code class="language-plaintext highlighter-rouge">reformat code</code>를 습관적으로 하게 되는 것도 큰 장점인 것 같습니다.<br /><br /></p>
+
+<p>다만 초창기에 팀원들의 동의를 받아야하며, 적응기간이 아주 약간 있으니 이점은 유의해야 합니다.<br /><br /></p>
+
+<p><br /><br /></p>
+
+<hr />
+
+<p><br /><br /><br /></p>
+
+<h1 id="-ktlint-프로젝트에-적용-준비하기">🚀 ktlint 프로젝트에 적용 준비하기</h1>
+
+<p><img src="/assets/img/post/20201227_02.jpg" alt="image" /><br /></p>
+<blockquote>
+  <p>개발자가 깨끗하게 해야할 것은 키보드 뿐만이 아닙니다.</p>
+</blockquote>
+
+<p><br /></p>
+
+<p>프로젝트에 ktlint 적용하는 방법입니다.</p>
+
+<p><br /><br /></p>
+
+<h2 id="1-buildgradleroot-수정하기">1. build.gradle(root) 수정하기</h2>
+
+<ul>
+  <li>최상단에 plugin <code class="language-plaintext highlighter-rouge">org.jlleitschuh.gradle.ktlint</code> 을 추가합니다.</li>
+  <li>레포지토리에 maven <code class="language-plaintext highlighter-rouge">https://plugins.gradle.org/m2/</code> 을 추가합니다.</li>
+  <li>classpath 의존성에 <code class="language-plaintext highlighter-rouge">org.jlleitschuh.gradle:ktlint-gradle</code> 를 추가합니다.<br /></li>
+</ul>
+
+<blockquote>
+  <p>작성일 기준 최신 버전은 9.4.1 입니다. 
+예제에서는 9.3.0을 사용했지만 어느 버전을 사용해도 무관합니다.</p>
+</blockquote>
+
+<p><br /></p>
+
+<p>다 적용한다면 아마 아래와 같은 모양이 될 겁니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">'org.jlleitschuh.gradle.ktlint'</span>
+
+<span class="n">buildscript</span> <span class="o">{</span>
+
+<span class="o">...</span><span class="err">중략</span><span class="o">...</span>
+
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">maven</span> <span class="o">{</span>
+            <span class="n">url</span> <span class="s2">"https://plugins.gradle.org/m2/"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">...</span><span class="err">중략</span><span class="o">...</span>
+
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s2">"org.jlleitschuh.gradle:ktlint-gradle:9.3.0"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>💁‍♂️  위에만 봐서는 이해가 잘 안된다면 <a href="https://github.com/HaenaraShin/Ktlint-Android-Sample/blob/main/build.gradle">샘플 코드</a>를 참고해보세요.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="2-buildgradleandroid-module-수정하기">2. build.gradle(android module) 수정하기</h2>
+
+<p><strong>안드로이드 app 모듈</strong>에 추가하는 방법입니다. <br /></p>
+
+<ul>
+  <li>최상단에 plugin <code class="language-plaintext highlighter-rouge">org.jlleitschuh.gradle.ktlint</code> 를 추가합니다.</li>
+  <li>ktlint 설정값을 추가합니다.</li>
+</ul>
+
+<blockquote>
+  <p>예제에서 설정값은 가장 무난한 설정값으로 했습니다. 
+공식페이지 설명을 보고 프로젝트에 맞게 설정을 수정해보세요.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p>다 적용한다면 아마 아래와 같은 모양이 될 겁니다.</p>
+
+<p><br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'org.jlleitschuh.gradle.ktlint'</span>
+<span class="o">}</span>
+
+<span class="o">...</span> <span class="err">중략</span> <span class="o">...</span>
+
+<span class="n">ktlint</span> <span class="o">{</span>
+    <span class="n">android</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="n">outputColorName</span> <span class="o">=</span><span class="s2">"RED"</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="n">disabledRules</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="s2">"import-ordering"</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>💁‍♂️  위에만 봐서는 이해가 잘 안된다면 <a href="https://github.com/HaenaraShin/Ktlint-Android-Sample/blob/main/app/build.gradle">샘플 코드</a>를 참고해보세요.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="3-buildgradlenon-android-module-수정하기">3. build.gradle(non-android module) 수정하기</h2>
+
+<p><strong>순수 Java/Koltin(JAR) 모듈</strong>에 추가하는 방법입니다. <br /></p>
+
+<ul>
+  <li>최상단에 plugin <code class="language-plaintext highlighter-rouge">org.jlleitschuh.gradle.ktlint</code> 를 추가합니다.</li>
+  <li>ktlint 설정값을 추가합니다.</li>
+</ul>
+
+<blockquote>
+  <p>안드로이드 모듈과 다 동일한데 <code class="language-plaintext highlighter-rouge">android = false</code>인 것만 유의해주세요.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'org.jlleitschuh.gradle.ktlint'</span>
+<span class="o">}</span>
+<span class="o">...</span>
+<span class="n">ktlint</span> <span class="o">{</span>
+    <span class="n">android</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="n">outputColorName</span> <span class="o">=</span><span class="s2">"RED"</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="n">disabledRules</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="s2">"import-ordering"</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>💁‍♂️  위에만 봐서는 이해가 잘 안된다면 <a href="https://github.com/HaenaraShin/Ktlint-Android-Sample/blob/main/lib/build.gradle">샘플 코드</a>를 참고해보세요.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<p>이제 적용이 다 되었다면 실제로 ktlint를 한번 써 봅시다!</p>
+
+<p><br /><br /><br /><br /></p>
+
+<hr />
+<h1 id="-ktlint-적용하기">🛠 ktlint 적용하기</h1>
+
+<p><img src="/assets/img/post/20201227_01.jpeg" alt="image" /><br /></p>
+<blockquote>
+  <p>코드를 청소할 시간입니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="1-수동으로-ktlint-체크하기-">1. 수동으로 Ktlint 체크하기 🔍</h2>
+
+<p>ktlint를 적용하게 되면 수시로 체크하게 되는데요<br />
+언제든지 아래와 같이 수동으로 코딩스타일을 준수하고 있는 지 확인할 수 있습니다.<br /><br /></p>
+
+<p>Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br /></p>
+
+<ul>
+  <li>MyProject &gt; Tasks &gt; verification &gt; ktlintCheck</li>
+</ul>
+
+<p><img src="/assets/img/post/20201227_check.png" alt="image" /><br /></p>
+
+<p>또는 콘솔에서 아래와 같이 입력합니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew ktlintCheck
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<p>만약 고쳐야 할 것이 있다면 아래와 같이 나옵니다.<br /></p>
+
+<p><img src="/assets/img/post/20201227_sample1.png" alt="image" /><br /><br /></p>
+
+<p>나름 친절하게 어느 코드 라인에서 틀렸는지 알려주며,<br />
+그 옆에 괄호로 왜 틀렸는지도 알려줍니다.<br /><br /></p>
+
+<p>다시 다 수정하고 고칠 것이 없다면 아래와 같이 통과하여 Success 합니다.<br /></p>
+
+<p><img src="/assets/img/post/20201227_sample2.png" alt="image" /><br /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="2-commit시-ktlint-체크-적용하기-git-hook-">2. Commit시 Ktlint 체크 적용하기 (Git hook) 🎣</h2>
+
+<p>매번 수동으로 체크할수는 없겠죠?<br />
+아래와 같이 git-hook에 적용하고 나면 commit 할 때마다 ktlint를 체크하여<br />
+스타일을 준수하지 않았다면 커밋이 실패하게 됩니다.<br /><br /></p>
+
+<p>Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br /></p>
+
+<ul>
+  <li>MyProject &gt; Tasks &gt; help &gt; addKtlintCheckGitPreCommitHook</li>
+</ul>
+
+<p><img src="/assets/img/post/20201227_hook.png" alt="image" /><br /></p>
+
+<p>또는 콘솔에서 아래와 같이 입력합니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew addKtlintCheckGitPreCommitHook
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<p>성공적으로 적용되었다면 <strong>어디에서 commit</strong>을 하더라도 <br />
+반드시 ktlint가 통과되어야 commit이 됩니다.<br /></p>
+
+<p><img src="/assets/img/post/20201227_error.png" alt="image" /></p>
+<blockquote>
+  <p>소스트리에서 commit 해도 마찬가지로 ktlint가 통과되어야만 합니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h4 id="️-잠깐-혹시-에러가-나진-않나요">⚠️ 잠깐! 혹시 에러가 나진 않나요?</h4>
+
+<blockquote>
+  <p>Execution failed for task ‘:addKtlintCheckGitPreCommitHook’.<br />
+java.io.IOException: No such file or directory</p>
+</blockquote>
+
+<p>만약 위와 에러가 발생한다면 .git 디렉토리 하위에 hooks 가 없어서 발생하는 것이니 hooks 디렉토리를 생성합니다.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> .git/hooks
+</code></pre></div></div>
+
+<p><br /><br /><br /><br /></p>
+
+<h2 id="3-android-studio-formatter를-ktlint에-맞게-설정-하기-">3. Android Studio formatter를 Ktlint에 맞게 설정 하기 🛠</h2>
+
+<p>이제부터는 수시로 <code class="language-plaintext highlighter-rouge">reformat code</code>를 호출하게 될 텐데, <br />
+안드로이드 스튜디오가 kotlin convention을 따르지 않아서 <br />
+오히려 반대로 자꾸 엉뚱한 스타일로 바꿔버리면 곤란하겠죠?<br />
+아래 방법대로 안드로이드 스튜디오의 코틀린 포맷을 ktlint와 동일하게 맞춰봅시다.<br /><br /></p>
+
+<p>Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br /></p>
+
+<ul>
+  <li>ClassNote &gt; Tasks &gt; help &gt; ktlintApplyToIdea</li>
+</ul>
+
+<p><img src="/assets/img/post/20201227_apply.png" alt="image" /><br /></p>
+
+<p>또는 콘솔에서 아래와 같이 입력합니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew ktlintApplyToIdea
+</code></pre></div></div>
+
+<p><br /><br /><br /><br /></p>
+
+<h1 id="주로-틀리는-것들-">주로 틀리는 것들 📌</h1>
+
+<p>주로 틀리는 것들이 있는데, 이 부분은 Android Studio 설정을 조금만 바꿔주면 해결됩니다.</p>
+
+<p><br /><br /></p>
+
+<h2 id="1-파일의-끝은-new-line-으로-끝나야-합니다">1. 파일의 끝은 new-line 으로 끝나야 합니다.</h2>
+
+<p>파일의 끝은 반드시 <strong>줄내림으로 끝내야 합니다.</strong><br /><br /></p>
+
+<p>그 이유는 콘솔에서 diff나 git 등으로 코드를 보거나 할 때 줄내림이 없으면<br />
+마지막 줄이 콘솔에서는 한줄로 보여서 문제가 되기 때문이라고 합니다.<br /><br /></p>
+
+<p><strong>Preferences &gt; Editor &gt; General</strong> 페이지의 <code class="language-plaintext highlighter-rouge">Save Files</code> 항목에서<br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">Ensure an empty line at the end of a file on save</code>를 체크하세요.<br /><br /></p>
+
+<p><img src="/assets/img/post/20201227_eof.png" alt="image" /><br /></p>
+
+<p><br /><br /><br /></p>
+<h2 id="2-wild-card-imports">2. Wild-card imports</h2>
+
+<p><strong>Preferences &gt; Editor &gt; Code Style &gt; Kotlin &gt; Imports</strong> 항목에서<br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">Top-level symbols</code>와 <code class="language-plaintext highlighter-rouge">Java Statics and Enum Members</code> 를 모두<br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">Use Single name import</code>로 고쳐주시면 됩니다.<br /></p>
+
+<p><img src="/assets/img/post/20201227_import.png" alt="image" /><br /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="3-continuation-indent-이어지는-들여쓰기">3. Continuation indent (이어지는 들여쓰기)</h2>
+
+<p>Android Studio에서 줄이 이어지는 경우 들여쓰기가 8칸이 기본값이기 때문에 수정이 필요합니다. <br /></p>
+
+<p><strong>Preferences &gt; Editor &gt; Code Style &gt; Kotlin &gt; Tabs and Indents</strong> 항목에서<br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">Continuation indent</code> 항목을 <strong>4로 수정해주세요.</strong><br /></p>
+
+<p><img src="/assets/img/post/20201227_ind.png" alt="image" /><br /></p>
+
+<p><br /><br /><br /></p>
+
+<h1 id="-예제가-필요하시다면">😎 예제가 필요하시다면…</h1>
+
+<p>혹시 이 글로만 이해가 잘 안되고 예제 프로젝트가 필요하시다면<br />
+제가 미리 만들어둔 프로젝트가 있으니 아래 링크로 확인해보세요<br /><br />
+<strong><a href="https://github.com/HaenaraShin/Ktlint-Android-Sample">https://github.com/HaenaraShin/Ktlint-Android-Sample</a></strong></p>
+
+<p><br /><br /><br /></p>
+:ET

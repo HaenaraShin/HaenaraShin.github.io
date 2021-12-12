@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.6
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Androbin Dev Blog" href="http://localhost:4000/feed.xml"/>
+    
+    
+
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/post/20210327_thumb.jpeg">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기 | Androbin Dev Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="안드로이스 스튜디오에서 Firebase 내부배포 플러그인과 git 커맨드를 이용한 배포 프로세스를 간략화 하는 방법을 소개합니다." />
+<meta property="og:description" content="안드로이스 스튜디오에서 Firebase 내부배포 플러그인과 git 커맨드를 이용한 배포 프로세스를 간략화 하는 방법을 소개합니다." />
+<link rel="canonical" href="http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html" />
+<meta property="og:url" content="http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html" />
+<meta property="og:site_name" content="Androbin Dev Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-27T14:11:00+09:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-03-27T14:11:00+09:00","dateModified":"2021-03-27T14:11:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html"},"url":"http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html","description":"안드로이스 스튜디오에서 Firebase 내부배포 플러그인과 git 커맨드를 이용한 배포 프로세스를 간략화 하는 방법을 소개합니다.","@type":"BlogPosting","headline":"AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Androbin Dev Blog" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기">
+    <meta name="twitter:description" content="Firebase 앱 내부배포?Firebase에서는 개발자를 위한 정말 다양한 서비스를 제공하고 있는데 오늘 소개할 서비스는 Firebase 앱 배포 입니다.  Firebase 앱 배포를 통해서 스토어에 올리지 않고 팀원들에게만 공유하여 다운받을 수 있도록 배포할 수 있습니다. 새로...">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/post/20210327_thumb.jpeg">
+    <meta name="twitter:image:alt" content="AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/avatar.png" />
+		</a>
+        
+        <a class="site-title" aria-label="Androbin Dev Blog" href="/">
+        Androbin Dev Blog
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About Me" title="About Me" href="/about/">
+                     About Me 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image" >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="AndroidStudio%EC%97%90%EC%84%9C+Firebase+%EC%95%B1+%EB%82%B4%EB%B6%80%EB%B0%B0%ED%8F%AC%EB%A5%BC+%ED%95%9C%EB%B0%A9%EC%97%90+%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0" class="title">AndroidStudio에서 Firebase 앱 내부배포를 한방에 해결하기</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      March 27, 2021
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <h1 id="firebase-앱-내부배포">Firebase 앱 내부배포?</h1>
+
+<p><img src="/assets/img/post/20210327_firebase.png" alt="Firebase" /></p>
+
+<p>Firebase에서는 개발자를 위한 정말 다양한 서비스를 제공하고 있는데 오늘 소개할 서비스는 <strong>Firebase 앱 배포</strong> 입니다.  <br />
+<strong>Firebase 앱 배포</strong>를 통해서 스토어에 올리지 않고 팀원들에게만 공유하여 다운받을 수 있도록 배포할 수 있습니다. <br />
+새로운 버전을 출시할 때 마다 테스터느 손쉽게 다운 받아서 테스트 해볼 수 있으며  <br />
+버전별로 테스트할 수 있도록 이전 버전의 다운로드도 지원합니다. <br />
+<br /></p>
+
+<p>자세한 소개는 <a href="https://firebase.google.com/docs/app-distribution">공식문서</a>를 참고해보세요.<br />
+<br /></p>
+<h2 id="내부배포를-android-studio-에서">내부배포를 Android Studio 에서?</h2>
+
+<p>보통은 <code class="language-plaintext highlighter-rouge">Firebase Console</code>을 웹으로 접속하여 APK파일을 직접 업로드하여 배포하지만 <br />
+<strong>Android Studio</strong>에서도 Firebase에서 app-distribute 플러그인을 제공하여 아주 손쉽게 배포할 수 있습니다.<br />
+사실 CLI, Fastlane 등을 통해서도 배포할 수 있지만 <br />
+이번 포스팅에서는 Gradle 플러그인을 이용한 방법을 소개합니다.<br />
+<br /></p>
+
+<p>자세한 내용은 <a href="https://firebase.google.com/docs/app-distribution/android/distribute-gradle">공식문서</a>를 참조하세요.<br />
+<br /><br /></p>
+
+<h3 id="의존성-추가-및-플러그인-적용">의존성 추가 및 플러그인 적용</h3>
+
+<p>우선 플러그인 사용을 위해 build.gradle(root)에 다음과 같이 추가합니다. <br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">google</span><span class="o">()</span>
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">'com.google.firebase:firebase-appdistribution-gradle:2.1.0'</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>build.gradle(app)에는 다음과 같이 플러그인을 적용합니다. <br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'com.google.firebase.appdistribution'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h3 id="빌드-타입에-firebase-배포-설정">빌드 타입에 Firebase 배포 설정</h3>
+
+<p>플러그인 적용이 완료되었다면 이제 출시노트와 대상 테스터를 설정합니다.<br />
+<code class="language-plaintext highlighter-rouge">buildTypes</code> 또는 <code class="language-plaintext highlighter-rouge">ProductFlavor</code>에 <code class="language-plaintext highlighter-rouge">firebaseAppDistribution</code> 설정을 추가합니다.<br /></p>
+
+<p>출시노트와 테스터는 String 객체로 직접 입력할 수도 있고 파일을 참조하도록 할 수도 있습니다.<br />
+테스터의 경우는 “,” 단위로 여러명을 지정할 수도 있고 아예 그룹이름 단위로 선택할 수도 있습니다.<br />
+아래 예시에서는 debug 빌드일 때 프로젝트 내의 <code class="language-plaintext highlighter-rouge">RELEASE_NOTE.txt</code>파일을 참조하도록 하였습니다.<br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="o">...</span>
+            <span class="n">firebaseAppDistribution</span> <span class="o">{</span>
+                <span class="n">releaseNotesFile</span> <span class="o">=</span> <span class="s2">"${rootDir}/RELEASE_NOTE.txt"</span>
+                <span class="n">testers</span> <span class="o">=</span> <span class="s2">"qatester@test.moc"</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>좀 더 자세한 설정 및 활용방법은 <a href="https://firebase.google.com/docs/app-distribution/android/distribute-gradle">공식문서</a>를 참조하세요.<br /></p>
+
+<p><br /><br /><br /><br /></p>
+
+<h3 id="배포-해보기">배포 해보기</h3>
+
+<p><img src="/assets/img/post/20210327_01.jpeg" alt="launch" /></p>
+
+<p>실제로 배포를 해봐야 동작하는 지 알 수 있겠죠?<br />
+우선 배포를 하기 전에 인증 부터 해야하는데요 <a href="https://firebase.google.com/docs/app-distribution/android/distribute-gradle#step_2_authenticate_with_firebase">인증 방법</a>은 세가지가 있습니다.<br /></p>
+
+<ol>
+  <li>플러그인의 로그인 작업을 통해 Google 계정에 로그인</li>
+  <li>Firebase 서비스 계정 사용자 인증 정보 사용</li>
+  <li>Firebase CLI를 사용하여 로그인</li>
+</ol>
+
+<p>인증하는 방법이 몇가지 있겠지만 커맨라인이 익숙하신 분들이라면 CLI를 추천드립니다.<br />
+나머지 인증 방법이 궁금하시다면 <a href="https://firebase.google.com/docs/app-distribution/android/distribute-gradle#step_2_authenticate_with_firebase">공식문서</a>를 참조하세요.<br /><br /><br /></p>
+
+<h4 id="cli로-인증하기">CLI로 인증하기</h4>
+
+<p>CLI 인증을 위해선 Firebase CLI 를 다운로드 받아야 합니다.<br />
+콘솔창에 아래와 같이 입력하면 쉽게 다운 받을 수 있습니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-sL</span> https://firebase.tools | bash
+</code></pre></div></div>
+
+<p>설치가 완료되었다면 다음 명령어를 입력하고 브라우저에서 인증 합니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>firebase login
+</code></pre></div></div>
+
+<p>브라우저에서 인증을 완료하면 다음과 같은 화면을 확인할 수 있습니다.<br /></p>
+
+<p><img src="/assets/img/post/20210327_auth.png" alt="auth" /></p>
+
+<p><br /><br /><br /></p>
+
+<h4 id="이젠-정말-배포-해보기">이젠 정말 배포 해보기</h4>
+
+<p>플러그인이 정상적으로 설정되었다면 gradle task 목록에 다음과 같이 태스크가 추가 되어 있는 것을 확인할 수 있습니다.<br /></p>
+
+<p><img src="/assets/img/post/20210327_plugin.png" alt="plugin" /></p>
+
+<p>해당 태스크를 실행하여 실제로 파이어베이스 콘솔에 앱이 잘 배포되는지 확인합니다.<br /></p>
+
+<p><br /><br /><br /><br /><br /></p>
+
+<h2 id="-그런데-결국-출시노트는-일일히-적어야-하는거-아냐">🤔 그런데 결국 출시노트는 일일히 적어야 하는거 아냐?</h2>
+
+<p>저는 이쯤에서 이런 고민을 했습니다.<br />
+<br />
+😠 <em>결국 출시노트는 여전히 손으로 다 적어야 하네</em><br />
+😣 <em>버전도 매번 일일히 올려야 하는 거잖아</em><br />
+😩 <em>그냥 웹에서 하던걸 안드로이드 스튜디오로 가져온게 다라면 그게 무슨 의미가 있을까?</em><br />
+<br />
+플러그인을 적용하면 분명 콘솔에 접속 할 필요도, APK를 직접 업로드 할 필요도 없어서 간편한 것은 사실이지만<br />
+아쉬운 점은 <strong>출시노트를 매번 일일히 수동</strong>으로 적고 <strong>버전도 매번 하나씩 올려주어야 한다</strong>는 것입니다.<br /><br /></p>
+
+<p>하지만 기왕 자동화를 시작할꺼면 끝까지 해야겠지요? 🤩<br />
+결과적으로 저는 버전관리와 출시노트를 자동으로 생성하는 것 까지 한세트로 묶어 자동화를 시도합니다.<br />
+<br /><br /></p>
+
+<h1 id="버전-관리-배포하기">버전 관리 배포하기</h1>
+
+<p><img src="/assets/img/post/20210327_03.jpeg" alt="auto" />
+<br /></p>
+
+<p>Git 명령어를 이용해서 출시노트를 자동으로 생성하고 버전 역시 자동으로 하나씩 올리는 방법을 소개합니다.<br /><br /></p>
+<h2 id="버전을-별도의-파일로-관리하기">버전을 별도의 파일로 관리하기</h2>
+
+<p>우선 버전을 <code class="language-plaintext highlighter-rouge">version.properties</code>라는 별도 파일로 생성하여 관리해봅시다.<br />
+별도의 파일로 관리하는 이유는 gradle에서 손쉽게 버전을 읽고 덮어씌워 저장하기 위해서입니다.<br />
+일단 프로젝트에 <code class="language-plaintext highlighter-rouge">version.properties</code>파일을 다음과 같이 생성해주세요.<br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version_name=1.0.0
+version_code=1
+</code></pre></div></div>
+
+<p>이후 해당 프로퍼티 파일을 읽어서 버전네임과 코드를 사용하도록 <code class="language-plaintext highlighter-rouge">build.gradle(app)</code>에 다음과 같이 코드를 추가합니다.<br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="n">versionProp</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">versionProp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">()</span>
+    <span class="n">versionProp</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="s2">"$project.rootDir/version.properties"</span><span class="o">))</span>
+    <span class="n">versionProp</span><span class="o">.</span><span class="na">each</span> <span class="o">{</span> <span class="n">prop</span> <span class="o">-&gt;</span>
+        <span class="n">project</span><span class="o">.</span><span class="na">ext</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">prop</span><span class="o">.</span><span class="na">key</span><span class="o">,</span> <span class="n">prop</span><span class="o">.</span><span class="na">value</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">versionProp</span>
+<span class="o">}</span>
+
+<span class="kt">def</span> <span class="n">verCode</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">prop</span> <span class="o">=</span> <span class="n">versionProp</span><span class="o">()</span>
+    <span class="k">return</span> <span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="s2">"${prop['version_code']}"</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="kt">def</span> <span class="n">verName</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">prop</span> <span class="o">=</span> <span class="n">versionProp</span><span class="o">()</span>
+    <span class="k">return</span> <span class="s2">"${prop['version_name']}"</span>
+<span class="o">}</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+
+    <span class="n">defaultConfig</span> <span class="o">{</span>
+        <span class="n">versionCode</span> <span class="nf">verCode</span><span class="o">()</span>
+        <span class="n">versionName</span> <span class="nf">verName</span><span class="o">()</span>
+        <span class="o">...</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">version.properties</code>의 버전을 하나씩 올리고 새로 저장하는 함수는 아래와 같습니다.<br />
+해당 함수도 <code class="language-plaintext highlighter-rouge">build.gradle(app)</code>에 추가해주세요.<br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">updateVersionProperties</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">code</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">versionProp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s2">"${rootDir}"</span><span class="o">,</span> <span class="s1">'version.properties'</span><span class="o">)</span>
+    <span class="kt">def</span> <span class="n">newVersion</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">name</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s1">'.'</span><span class="o">))</span> <span class="o">+</span>
+            <span class="s2">".${Integer.valueOf(name.split('\\.').last()) + 1}"</span>
+    <span class="n">versionProp</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="s2">"version_name=${newVersion}\n"</span> <span class="o">+</span>
+            <span class="s2">"version_code=${code + 1}"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="git-log로-출시노트-만들기">Git Log로 출시노트 만들기</h2>
+
+<p>이제 출시노트를 자동생성해볼 차례입니다.<br />
+Git Log를 이용하여 그간 작업한 내용을 출시노트로 변환하는 작업을 할 겁니다.<br />
+<br />
+일단 마지막 태그부터 최신까지의 커밋 메세지를 출력하는 git 명령어는 다음과 같습니다.<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="si">$(</span>git describe <span class="nt">--tags</span> <span class="nt">--abbrev</span><span class="o">=</span>0<span class="si">)</span>..HEAD <span class="nt">--oneline</span> <span class="nt">--format</span><span class="o">=</span><span class="s2">"%s"</span>
+</code></pre></div></div>
+
+<p>이제 이 명령어를 gradle에서 실행하면 되는데…<br />
+문제는 <code class="language-plaintext highlighter-rouge">$(git describe --tags --abbrev=0)</code>와 같이 명령어 안의 명령어를 한번에 실행할 수가 없다는 점입니다.<br />
+<br />
+따라서 <br /></p>
+
+<h4 id="1-마지막-태그-버전-가져오기">1. 마지막 태그 버전 가져오기</h4>
+
+<h4 id="2-특정-버전부터-최신까지의-로그-출력하기">2. 특정 버전부터 최신까지의 로그 출력하기</h4>
+
+<p>이렇게 두가지 커맨드를 각각 함수로 호출해주고 출력한 내용을 <code class="language-plaintext highlighter-rouge">RELEASE_NOTE.txt</code> 파일로 저장해야 합니다.<br />
+아래의 함수가 두가지 동작을 처리하는 함수인데 이 역시 <code class="language-plaintext highlighter-rouge">build.gradle(app)</code>에 추가합니다.<br /><br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">createReleaseNote</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">lastTag</span> <span class="o">=</span> <span class="o">{</span>
+        <span class="kt">def</span> <span class="n">stdout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayOutputStream</span><span class="o">()</span>
+        <span class="n">exec</span> <span class="o">{</span>
+            <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'describe'</span><span class="o">,</span> <span class="s1">'--tags'</span><span class="o">,</span> <span class="s1">'--abbrev=0'</span>
+            <span class="n">standardOutput</span> <span class="o">=</span> <span class="n">stdout</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">stdout</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">trim</span><span class="o">()</span>
+    <span class="o">}</span>
+
+    <span class="kt">def</span> <span class="n">stdout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayOutputStream</span><span class="o">()</span>
+    <span class="n">exec</span> <span class="o">{</span>
+        <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'log'</span><span class="o">,</span> <span class="s2">"${lastTag()}..HEAD"</span><span class="o">,</span> <span class="s1">'--oneline'</span><span class="o">,</span> <span class="s1">'--format=%s'</span>
+        <span class="n">standardOutput</span> <span class="o">=</span> <span class="n">stdout</span>
+    <span class="o">}</span>
+    <span class="kt">def</span> <span class="n">text</span> <span class="o">=</span> <span class="n">stdout</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">trim</span><span class="o">()</span>
+    <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s2">"${rootDir}"</span><span class="o">,</span> <span class="s2">"RELEASE_NOTE.txt"</span><span class="o">).</span><span class="na">text</span> <span class="o">=</span> <span class="n">text</span>
+    <span class="k">return</span> <span class="n">text</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>참고로 <code class="language-plaintext highlighter-rouge">--format=%s</code> 는 커밋 메세지만 출력하도록 하는 포맷인데 <br />
+%h를 추가하면 커밋 리비전도 함께 출력할 수 있고 필요에 따라 포맷을 원하는대로 수정해서 쓸 수 있습니다.<br />
+<br /></p>
+
+<blockquote>
+  <p>RELEASE_NOTE.txt 파일은 .gitignore 파일에 추가해서 커밋에 추가되지 않도록 하는 것을 권장합니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="버전별-git-tag-남기기">버전별 Git Tag 남기기</h2>
+
+<p>이제 버전 네임과 코드가 올라간 것을 다른 팀원들과도 Commit으로 공유하고 출시를 tag 로 남겨봅시다.<br />
+아래 함수도 역시 <code class="language-plaintext highlighter-rouge">build.gradle(app)</code>에 추가합니다.<br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">gitCommitAndTagVersion</span><span class="o">(</span><span class="n">releaseNote</span><span class="o">,</span> <span class="n">verName</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">exec</span> <span class="o">{</span> <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'reset'</span><span class="o">,</span> <span class="s1">'HEAD'</span> <span class="o">}</span>
+        <span class="n">exec</span> <span class="o">{</span> <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'add'</span><span class="o">,</span> <span class="s2">"${rootDir}/version.properties"</span> <span class="o">}</span>
+        <span class="n">exec</span> <span class="o">{</span> <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'commit'</span><span class="o">,</span> <span class="s1">'-m'</span><span class="o">,</span> <span class="s2">"v${verName} is released\n\n${releaseNote}"</span> <span class="o">}</span>
+        <span class="n">exec</span> <span class="o">{</span> <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'tag'</span><span class="o">,</span> <span class="s2">"v${verName}"</span> <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">()</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<blockquote>
+  <p>혹시 해당 기능이 동작 하지 않는다면 터미널이나 커맨드 콘솔에서 git 동작하는지 우선 확인해야 합니다. <br />
+윈도우의 환경변수나 맥/리눅스의 PATH에 git 경로를 추가해주시면 해결할 수 있습니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="빌드-및-배포-하기">빌드 및 배포 하기</h2>
+
+<p>task를 생성하고 dependsOn 으로 의존관계를 만들어 둡니다.<br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">task</span> <span class="nf">_1_updateVersion</span><span class="o">(</span><span class="nl">group:</span> <span class="s1">'_sample_'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doLast</span> <span class="o">{</span>
+        <span class="c1">// check if anything has changed</span>
+        <span class="kt">def</span> <span class="n">releaseNote</span> <span class="o">=</span> <span class="n">createReleaseNote</span><span class="o">()</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">releaseNote</span><span class="o">.</span><span class="na">isBlank</span><span class="o">())</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">GradleException</span><span class="o">(</span><span class="s1">'Nothing has changed from last tag.'</span><span class="o">)</span>
+
+        <span class="n">updateVersionProperties</span><span class="o">(</span><span class="n">verName</span><span class="o">(),</span> <span class="n">verCode</span><span class="o">())</span>
+        <span class="n">gitCommitAndTagVersion</span><span class="o">(</span><span class="n">releaseNote</span><span class="o">,</span> <span class="n">verName</span><span class="o">())</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">task</span> <span class="nf">_2_buildAndDistribute</span><span class="o">(</span><span class="nl">dependsOn:</span> <span class="s1">'clean'</span><span class="o">,</span> <span class="nl">group:</span> <span class="s1">'_sample_'</span><span class="o">)</span> <span class="o">{}</span>
+<span class="n">_2_buildAndDistribute</span><span class="o">.</span><span class="na">dependsOn</span><span class="o">(</span><span class="s1">'assemble'</span><span class="o">)</span>
+<span class="n">_2_buildAndDistribute</span><span class="o">.</span><span class="na">dependsOn</span><span class="o">(</span><span class="s1">'appDistributionUploadDebug'</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>task에서 group으로 task의 그룹을 지정할 수 있습니다.<br />
+dependsOn으로 해당 태스크가 실행되기 전에 어떤 task가 실행될 것인지 지정할 수 있습니다.<br />
+위 예제에서 dependsOn의 순서는 되도록 지켜주세요.<br /></p>
+
+<p><br /><br /><br /></p>
+
+<h1 id="-이제-남은-것은-실전-뿐">🚀 이제 남은 것은 실전 뿐</h1>
+
+<p><img src="/assets/img/post/20210327_tasks.png" alt="tasks" /></p>
+
+<p>task 1, 2를 순서대로 실행합니다.<br /></p>
+
+<blockquote>
+  <p>만약 RELASE_NOTE를 수정해서 배포하고 싶다면 <br />
+task1 실행 이후 수동으로 RELASE_NOTE를 수정하신 다음 task2 실행하시면 됩니다.</p>
+</blockquote>
+
+<p><br />
+그리고 배포된 앱을 확인합니다.<br /></p>
+
+<p><img src="/assets/img/post/20210327_05.png" alt="result" /></p>
+
+<p><br />어때요? 참 쉽죠??<br /><br /><br /></p>
+
+<p><br /><br /></p>
+
+<h2 id="샘플">샘플</h2>
+
+<p>각 부분별로 설명하다보니 조금 복잡해보이고 이해가 어려울 수 있을 것 같습니다.<br />
+아래 샘플 프로젝트를 참고해서 어떤식으로 구성 되어 있는지 확인해보시면 좋을 것 같습니다.<br />
+아마 README와 <strong>build.gradle(app)</strong> 파일만 훑어보셔도 충분히 참고가 될 것 같습니다 😄<br />
+<br /><br /><br /></p>
+
+<p><img src="/assets/img/post/20210327_04.png" alt="repo" />
+<br />
+<a href="https://github.com/HaenaraShin/Firebase-App-Distribution-Plugin-Sample">https://github.com/HaenaraShin/Firebase-App-Distribution-Plugin-Sample</a></p>
+
+<p>도움이 되셨다면 샘플 프로젝트에 스타도 한번씩 부탁드립니다 ⭐️<br />
+<br />
+<br /><br /><br /></p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fandroid%2Cfirebase%2F2021%2F03%2F27%2FFirebase_App_Distribution_on_AndroidStudio.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=AndroidStudio%EC%97%90%EC%84%9C+Firebase+%EC%95%B1+%EB%82%B4%EB%B6%80%EB%B0%B0%ED%8F%AC%EB%A5%BC+%ED%95%9C%EB%B0%A9%EC%97%90+%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fandroid%2Cfirebase%2F2021%2F03%2F27%2FFirebase_App_Distribution_on_AndroidStudio.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html&title=AndroidStudio%EC%97%90%EC%84%9C+Firebase+%EC%95%B1+%EB%82%B4%EB%B6%80%EB%B0%B0%ED%8F%AC%EB%A5%BC+%ED%95%9C%EB%B0%A9%EC%97%90+%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0%20%7C%20Androbin+Dev+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=AndroidStudio%EC%97%90%EC%84%9C+Firebase+%EC%95%B1+%EB%82%B4%EB%B6%80%EB%B0%B0%ED%8F%AC%EB%A5%BC+%ED%95%9C%EB%B0%A9%EC%97%90+%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0%20%7C%20Androbin+Dev+Blog&body=:%20http://localhost:4000/android,firebase/2021/03/27/Firebase_App_Distribution_on_AndroidStudio.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list"></div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haenara';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="이젠 안녕, 글또!" href="/daily/2021/05/02/Reviewing_guelddo.html">
+            <p>Previous post</p>
+            이젠 안녕, 글또!
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Ktor는 Retrofit을 대신할 수 있을까?" href="/android,/kotlin,/ktor/2021/03/21/Ktor_tutorial.html">
+            <p>Next post</p>
+            Ktor는 Retrofit을 대신할 수 있을까?
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+   background-image: url('/assets/img/post/20210327_thumb.jpeg');
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.6
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Androbin Dev Blog" href="http://localhost:4000/feed.xml"/>
+    
+    
+
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/post/20210731_thumb.jpeg">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kotlin으로 실행 가능한 JAR 파일 만들기 | Androbin Dev Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kotlin으로 실행 가능한 JAR 파일 만들기" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kotlin으로 실행 가능한 JAR 파일 만들기" />
+<meta property="og:description" content="Kotlin으로 실행 가능한 JAR 파일 만들기" />
+<link rel="canonical" href="http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html" />
+<meta property="og:url" content="http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html" />
+<meta property="og:site_name" content="Androbin Dev Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-31T21:11:00+09:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-07-31T21:11:00+09:00","dateModified":"2021-07-31T21:11:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html"},"url":"http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html","description":"Kotlin으로 실행 가능한 JAR 파일 만들기","@type":"BlogPosting","headline":"Kotlin으로 실행 가능한 JAR 파일 만들기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Androbin Dev Blog" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Kotlin으로 실행 가능한 JAR 파일 만들기">
+    <meta name="twitter:description" content="이번 포스팅에서는 코틀린으로 실행가능한 JAR파일을 만드는 방법을 소개하고자 합니다.개인적으로는 코틀린을 최대한 활용하고자, 업무용 스크립트도 코틀린으로 작성하는 편입니다. 그러기위해서는 결국 코틀린으로 빌드한 실행파일이 필요합니다.일반적으로 코틀린으로 JVM 기반의 어플리케이션을...">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/post/20210731_thumb.jpeg">
+    <meta name="twitter:image:alt" content="Kotlin으로 실행 가능한 JAR 파일 만들기">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/avatar.png" />
+		</a>
+        
+        <a class="site-title" aria-label="Androbin Dev Blog" href="/">
+        Androbin Dev Blog
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About Me" title="About Me" href="/about/">
+                     About Me 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image" >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="Kotlin%EC%9C%BC%EB%A1%9C+%EC%8B%A4%ED%96%89+%EA%B0%80%EB%8A%A5%ED%95%9C+JAR+%ED%8C%8C%EC%9D%BC+%EB%A7%8C%EB%93%A4%EA%B8%B0" class="title">Kotlin으로 실행 가능한 JAR 파일 만들기</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      July 31, 2021
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <p>이번 포스팅에서는 코틀린으로 실행가능한 JAR파일을 만드는 방법을 소개하고자 합니다.<br /></p>
+
+<p><img src="/assets/img/post/20210731_01.png" alt="jar" /><br /></p>
+
+<p><br />
+개인적으로는 코틀린을 최대한 활용하고자, 업무용 스크립트도 코틀린으로 작성하는 편입니다. <br />
+그러기위해서는 결국 코틀린으로 빌드한 실행파일이 필요합니다.<br />
+일반적으로 코틀린으로 JVM 기반의 어플리케이션을 만들기 때문에<br />
+실행가능한 JAR 파일을 만드는 방법을 공유하고자 합니다. <br />
+<br /></p>
+
+<p>첫번째로 프로젝트를 생성해봅니다.<br />
+저는 안드로이드 개발자다보니 gradle이 익숙하여 <strong>gradle Kotlin/JVM</strong> 으로 프로젝트를 생성합니다. <br />
+<br /></p>
+
+<p><img src="/assets/img/post/20210731_02.png" alt="project_create" /><br />
+<img src="/assets/img/post/20210731_03.png" alt="project_create" /></p>
+
+<p><br /><br /><br />
+프로젝트가 생성되었다면 아래와 같이 간단히 hello world 프로그램을 작성해봅니다.<br />
+<br /></p>
+
+<p><img src="/assets/img/post/20210731_04.png" alt="hello_world" /><br /></p>
+
+<p>IDE에서 직접 실행하면 다음과 같이 잘 실행되는 것을 확인할 수 있습니다.<br /></p>
+
+<p><img src="/assets/img/post/20210731_05.png" alt="hello_world!" /><br /></p>
+
+<p><br /><br /><br /></p>
+
+<p>그럼 이제 이 프로그램을 다른 곳에서도 실행할 수 있도록 jar 파일로 생성해봅시다.<br />
+jar 파일로 만드는 것은 우측 gradle 탭의 태스크에서도 실행 가능합니다.<br /></p>
+
+<p><img src="/assets/img/post/20210731_06.png" alt="gralde_task_jar" /><br /></p>
+
+<p>참고로 jar 파일은 터미널에서 아래와 같이 입력하여 실행할 수 있습니다.<br /></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> <span class="o">{</span>jar 파일 이름<span class="o">}</span>
+</code></pre></div></div>
+<p><br /><br /><br /><br /></p>
+
+<p>문제는…<br />
+jar 파일을 생성하고 실행하면 다음과 같이 나오고 제대로 실행되지 않습니다.😱😱😱<br /><br /></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">no main manifest attribute, in ExecutableJarExample-1.0-SNAPSHOT.jar</code></p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<p>이 문제는 메인클래스를 찾지 못해서 발생하는 문제로<br />
+아래와 같이 <code class="language-plaintext highlighter-rouge">build.gradle</code>파일에 manifest 설정을 jar 태스크에 추가해주면 됩니다. <br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jar</span> <span class="o">{</span>
+    <span class="n">manifest</span> <span class="o">{</span>
+        <span class="n">attributes</span> <span class="s1">'Main-Class'</span><span class="o">:</span> <span class="s1">'dev.haenara.sample.MainKt'</span> <span class="c1">// 메인 함수가 담긴 클래스 패키지명</span>
+    <span class="o">}</span>
+    <span class="n">archiveName</span> <span class="s1">'HelloWrold.jar'</span> <span class="c1">// jar 파일 이름</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br /><br /><br /></p>
+
+<p>이와 별개로 제가 예전에 삽질했던 문제가 있어서 첨언하자면<br />
+혹시 gradle 버전이 낮거나 설정이 안맞으면 아래와 같이 에러가 발생할 수 있습니다.<br />
+저는 예전에 이 부분 때문에 오랫동안 삽질했던 기억이 나네요..😢<br /></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">Caused by: java.lang.ClassNotFoundException: kotlin.jvm.internal.Intrinsics</code></p>
+</blockquote>
+
+<p><br /><br />
+이 경우에는 jar 빌드 스크립트에 아래 내용을 추가합니다. <br /></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jar</span> <span class="o">{</span>
+    <span class="o">...</span><span class="err">중략</span><span class="o">...</span>
+    <span class="n">from</span> <span class="o">{</span> <span class="n">configurations</span><span class="o">.</span><span class="na">default</span><span class="o">.</span><span class="na">collect</span> <span class="o">{</span> <span class="n">it</span><span class="o">.</span><span class="na">isDirectory</span><span class="o">()?</span> <span class="n">it</span> <span class="o">:</span> <span class="n">zipTree</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /><br /><br /><br /></p>
+
+<p>이것을 이용하여 안드로이드 프로젝트에 java/kotlin library 을 생성하면 <br />안드로이드 스튜디오에서도 데스크탑용 앱 또는 jar 스크립트를 만들 수 있습니다.<br /></p>
+
+<p><img src="/assets/img/post/20210731_07.png" alt="project_create" /></p>
+
+<ul>
+  <li>gralde 세팅은 동일하게 구성하면 됩니다.</li>
+</ul>
+
+<p>이것을 이용한 안드로이드/PC 크로스플랫폼 개발도 가능한데, 이 것은 차후에 기회가 된다면 풀어보도록 하겠습니다.
+<br /><br /><br /></p>
+
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fkotlin%2F2021%2F07%2F31%2FExcutable-jar.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Kotlin%EC%9C%BC%EB%A1%9C+%EC%8B%A4%ED%96%89+%EA%B0%80%EB%8A%A5%ED%95%9C+JAR+%ED%8C%8C%EC%9D%BC+%EB%A7%8C%EB%93%A4%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fkotlin%2F2021%2F07%2F31%2FExcutable-jar.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html&title=Kotlin%EC%9C%BC%EB%A1%9C+%EC%8B%A4%ED%96%89+%EA%B0%80%EB%8A%A5%ED%95%9C+JAR+%ED%8C%8C%EC%9D%BC+%EB%A7%8C%EB%93%A4%EA%B8%B0%20%7C%20Androbin+Dev+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=Kotlin%EC%9C%BC%EB%A1%9C+%EC%8B%A4%ED%96%89+%EA%B0%80%EB%8A%A5%ED%95%9C+JAR+%ED%8C%8C%EC%9D%BC+%EB%A7%8C%EB%93%A4%EA%B8%B0%20%7C%20Androbin+Dev+Blog&body=:%20http://localhost:4000/kotlin/2021/07/31/Excutable-jar.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list"></div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haenara';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="너, 나, 우리에게 Unit 테스트가 필요한 이유" href="/tdd,/test/2021/08/07/Why_need_unit_test.html">
+            <p>Previous post</p>
+            너, 나, 우리에게 Unit 테스트가 필요한 이유
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="이젠 안녕, 글또!" href="/daily/2021/05/02/Reviewing_guelddo.html">
+            <p>Next post</p>
+            이젠 안녕, 글또!
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+   background-image: url('/assets/img/post/20210731_thumb.jpeg');
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>

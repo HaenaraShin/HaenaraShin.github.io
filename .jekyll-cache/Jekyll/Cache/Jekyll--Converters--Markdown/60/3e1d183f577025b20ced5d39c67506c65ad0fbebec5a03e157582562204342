@@ -1,0 +1,55 @@
+I"�<p>Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설염합니다.</p>
+
+<p>안드로이드에서 처음 앱을 빌드하면 apk는 보통</p>
+
+<p><code class="language-plaintext highlighter-rouge">app-debug.apk</code> 또는 <code class="language-plaintext highlighter-rouge">app-release.apk</code></p>
+
+<p>가 보통 나옵니다.</p>
+
+<p>버전관리를 위해 APK 이름에 빌드 날짜와 git 리비전을 남기고 싶다면
+아래와 같이 작성해보세요.</p>
+
+<h1 id="1-앱-수준의-buildgradleapp">1. 앱 수준의 build.gradle(app)</h1>
+
+<p>앱 수준의 build.gradle(app) 에서 android{ } 안에 아래와 같이 추가 하면 됩니다</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">android</span><span class="o">.</span><span class="na">applicationVariants</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span> <span class="n">variant</span> <span class="o">-&gt;</span>
+        <span class="n">changeAPKName</span><span class="o">(</span><span class="n">variant</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h1 id="2--changeapkname-함수-추가">2.  changeAPKName 함수 추가</h1>
+
+<p>그 다음 android{ }밖에 changeAPKName 함수를 추가합니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">changeAPKName</span><span class="o">(</span><span class="n">variant</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">variant</span><span class="o">.</span><span class="na">outputs</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span> <span class="n">output</span> <span class="o">-&gt;</span>
+        <span class="kt">def</span> <span class="n">apkName</span> <span class="o">=</span> <span class="o">{</span>
+            <span class="kt">def</span> <span class="n">appName</span> <span class="o">=</span> <span class="s1">'sample'</span>
+            <span class="kt">def</span> <span class="n">buildType</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s1">'-'</span><span class="o">).</span><span class="na">last</span><span class="o">()</span> <span class="c1">// debug or release</span>
+            <span class="kt">def</span> <span class="n">currentDate</span> <span class="o">=</span> <span class="o">{</span> <span class="k">return</span> <span class="k">new</span> <span class="n">Date</span><span class="o">().</span><span class="na">format</span><span class="o">(</span><span class="s1">'yyyyMMdd'</span><span class="o">)</span> <span class="o">}</span>
+            <span class="kt">def</span> <span class="n">gitHash</span> <span class="o">=</span> <span class="o">{</span> <span class="o">-&gt;</span>
+                <span class="kt">def</span> <span class="n">stdout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayOutputStream</span><span class="o">()</span>
+                <span class="n">exec</span> <span class="o">{</span>
+                    <span class="n">commandLine</span> <span class="s1">'git'</span><span class="o">,</span> <span class="s1">'rev-parse'</span><span class="o">,</span> <span class="s1">'--verify'</span><span class="o">,</span> <span class="s1">'--short'</span><span class="o">,</span> <span class="s1">'HEAD'</span>
+                    <span class="n">standardOutput</span> <span class="o">=</span> <span class="n">stdout</span>
+                <span class="o">}</span>
+                <span class="k">return</span> <span class="n">stdout</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">trim</span><span class="o">()</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="s2">"${appName}_${buildType}_${currentDate()}_${gitHash()}.apk"</span>
+        <span class="o">}</span>
+        <span class="n">outputFileName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">apkName</span><span class="o">())</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s1">'APK FILE NAME : '</span> <span class="o">+</span> <span class="n">apkName</span><span class="o">())</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>그럼 아래와 같은 형식으로 바뀝니다.</p>
+
+<p><img src="/assets/img/post/20201003_01.jpeg" alt="sample_result" /><br /></p>
+
+<p>만약 다른 방식을 원한다면 changeAPKName 함수를 수정해보세요.</p>
+:ET

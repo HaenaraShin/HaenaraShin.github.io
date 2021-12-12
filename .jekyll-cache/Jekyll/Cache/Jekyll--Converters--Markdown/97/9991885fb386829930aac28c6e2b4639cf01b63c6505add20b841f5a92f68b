@@ -1,0 +1,125 @@
+I"I<blockquote>
+  <p>이번 포스팅에서는 JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.</p>
+</blockquote>
+
+<p><img src="/assets/img/post/20201008_1.jpeg" alt="Disaseeamble" /></p>
+
+<p><br /></p>
+
+<p>Java 개발자로서 살다보면 자주는 아니지만
+이미 빌드가 완료된  JAR 파일의 바이트코드를 수정해야 하는 일이 생길 수 있다.
+(없다면 다행이고… 🙄)</p>
+
+<p>정말 피치 못할 사정때문에 해야한다면 아래 방법을 참고해보자.</p>
+
+<h1 id="0--사전-준비">0. 🎬 사전 준비</h1>
+<p>바이트코드를 수정할 수 있는 에디터 JBE를 준비한다.</p>
+
+<p>바이트코드 에디터는 여기 에서 다운로드 받는다.</p>
+
+<blockquote>
+  <ul>
+    <li>맥에서 jbe 실행방법은 터미널 해당 경로에서 아래와 같이 친다.</li>
+  </ul>
+</blockquote>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>java <span class="nt">-cp</span> bin ee.ioc.cs.jbe.browser.BrowserApplication
+</code></pre></div></div>
+
+<h1 id="1--jar-라이브러리-압축-해제">1. 🚧 JAR 라이브러리 압축 해제</h1>
+
+<ol>
+  <li>JAR 파일의 확장자를 .zip 으로 변경 후 압축해제 하거나 콘솔에서 unzip 명령어로 압축을 푼다.</li>
+</ol>
+
+<blockquote>
+  <p>JAR 파일을 압축해제 해보면 Manifest와 .class파일로 구성되어 있다.</p>
+</blockquote>
+
+<h1 id="2-️-클래스파일-수정">2. 🛠️ 클래스파일 수정</h1>
+
+<ol>
+  <li>
+    <p>바이트코드 에디터로 압축해제한 파일에서 수정할 class 파일을 연다.</p>
+  </li>
+  <li>
+    <p>Methods &gt; 수정할 함수이름 &gt; [0] Code &gt; Code Editor 탭으로 이동한다.</p>
+  </li>
+  <li>
+    <p>원하는 라인을 수정한다.</p>
+  </li>
+  <li>
+    <p>Save method 로 class 파일 저장한다.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>수정하는 방법은 아래의 Tip 항목을 참고해보자.</p>
+</blockquote>
+
+<h1 id="3--jar-라이브러리-재압축">3. 🤐 JAR 라이브러리 재압축</h1>
+<ol>
+  <li>
+    <p>압축해제한 최상위 경로의 com, META-INF을 다시 zip 파일로 압축한다.</p>
+  </li>
+  <li>
+    <p>zip 파일의 확장자를 .jar 로 수정한다.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>맥의 기본 압축프로그램을 사용 시 .DS_Store 와 __MACOSX 와 같은 파일이 첨부되므로 WinArchiveLite를 사용하거나 콘솔에서 zip 명령어로 직접 압축한다.</p>
+</blockquote>
+
+<h1 id="-️-바이트코드-수정하는-tip">+ 💁‍♂️ 바이트코드 수정하는 Tip</h1>
+<p>바이트코드 명령어의 목록은 여기에서 확인할 수 있다.</p>
+
+<p><strong>위키피디아 링크</strong> : <a href="https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings">https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings</a></p>
+
+<p>바이트코드 읽는 요령을 아주 간단히만 적자면 (간단할 수가 없지만..)</p>
+
+<p>명령어는 보통 {데이터형} + {명령코드(opcode)} 형태로 되어 있는데
+가령 예를들어 정수형 값을 저장한다면 istore, 객체를 저장한다면 astore
+만약 정수형 값을 불러온다면  iload, 객체를 불러온다면 aload 와 같은 식이다.
+또한 상수값의 경우는 iconst와 같이 const 를 이용하여 불러온다.</p>
+
+<p>가령 아래와 같이 Java 코드를 수정한다고 치자.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">return 1;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">return 0;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이를 Before 에서 After로 수정하고 싶다면 아래와 같이 bytecode를 수정하면 된다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">iconst_1</code><br /><code class="language-plaintext highlighter-rouge">ireturn</code></td>
+      <td><code class="language-plaintext highlighter-rouge">iconst_0</code><br /><code class="language-plaintext highlighter-rouge">ireturn</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>사실 일부사례를 더 적었으나…
+단순히 코드와 클래스파일이 정확하게 변형 되는 것이 아니라서
+상황에 따라서 틀릴 수 있는 내용이 포함되어 삭제했다… 😥</p>
+
+<p>바이트코드의 명령어의 정의를 찾아보면 좀 더 도움이 될 수 있다.</p>
+:ET

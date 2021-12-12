@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.6
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Androbin Dev Blog" href="http://localhost:4000/feed.xml"/>
+    
+    
+
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/post/20201008_thumb.png">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정) | Androbin Dev Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다." />
+<meta property="og:description" content="JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다." />
+<link rel="canonical" href="http://localhost:4000/android/2020/10/07/decomplie-jar.html" />
+<meta property="og:url" content="http://localhost:4000/android/2020/10/07/decomplie-jar.html" />
+<meta property="og:site_name" content="Androbin Dev Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-07T23:42:00+09:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-07T23:42:00+09:00","dateModified":"2020-10-07T23:42:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/android/2020/10/07/decomplie-jar.html"},"url":"http://localhost:4000/android/2020/10/07/decomplie-jar.html","description":"JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.","@type":"BlogPosting","headline":"JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Androbin Dev Blog" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)">
+    <meta name="twitter:description" content="  이번 포스팅에서는 JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.Java 개발자로서 살다보면 자주는 아니지만이미 빌드가 완료된  JAR 파일의 바이트코드를 수정해야 하는 일이 생길 수 있다.(없다면 다행이고… 🙄)정말 피치 못할 사정때문에 해야한다면 ...">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/post/20201008_thumb.png">
+    <meta name="twitter:image:alt" content="JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/avatar.png" />
+		</a>
+        
+        <a class="site-title" aria-label="Androbin Dev Blog" href="/">
+        Androbin Dev Blog
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About Me" title="About Me" href="/about/">
+                     About Me 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image" >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="JAR+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+%EB%9C%AF%EC%96%B4%EA%B3%A0%EC%B9%98%EA%B8%B0+%28.class+%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C+%EC%88%98%EC%A0%95%29" class="title">JAR 라이브러리 뜯어고치기 (.class 바이트코드 수정)</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      October 7, 2020
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <blockquote>
+  <p>이번 포스팅에서는 JAR 안에 빌드된 바이트코드(.class)를 수정하는 방법을 소개합니다.</p>
+</blockquote>
+
+<p><img src="/assets/img/post/20201008_1.jpeg" alt="Disaseeamble" /></p>
+
+<p><br /></p>
+
+<p>Java 개발자로서 살다보면 자주는 아니지만
+이미 빌드가 완료된  JAR 파일의 바이트코드를 수정해야 하는 일이 생길 수 있다.
+(없다면 다행이고… 🙄)</p>
+
+<p>정말 피치 못할 사정때문에 해야한다면 아래 방법을 참고해보자.</p>
+
+<h1 id="0--사전-준비">0. 🎬 사전 준비</h1>
+<p>바이트코드를 수정할 수 있는 에디터 JBE를 준비한다.</p>
+
+<p>바이트코드 에디터는 여기 에서 다운로드 받는다.</p>
+
+<blockquote>
+  <ul>
+    <li>맥에서 jbe 실행방법은 터미널 해당 경로에서 아래와 같이 친다.</li>
+  </ul>
+</blockquote>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>java <span class="nt">-cp</span> bin ee.ioc.cs.jbe.browser.BrowserApplication
+</code></pre></div></div>
+
+<h1 id="1--jar-라이브러리-압축-해제">1. 🚧 JAR 라이브러리 압축 해제</h1>
+
+<ol>
+  <li>JAR 파일의 확장자를 .zip 으로 변경 후 압축해제 하거나 콘솔에서 unzip 명령어로 압축을 푼다.</li>
+</ol>
+
+<blockquote>
+  <p>JAR 파일을 압축해제 해보면 Manifest와 .class파일로 구성되어 있다.</p>
+</blockquote>
+
+<h1 id="2-️-클래스파일-수정">2. 🛠️ 클래스파일 수정</h1>
+
+<ol>
+  <li>
+    <p>바이트코드 에디터로 압축해제한 파일에서 수정할 class 파일을 연다.</p>
+  </li>
+  <li>
+    <p>Methods &gt; 수정할 함수이름 &gt; [0] Code &gt; Code Editor 탭으로 이동한다.</p>
+  </li>
+  <li>
+    <p>원하는 라인을 수정한다.</p>
+  </li>
+  <li>
+    <p>Save method 로 class 파일 저장한다.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>수정하는 방법은 아래의 Tip 항목을 참고해보자.</p>
+</blockquote>
+
+<h1 id="3--jar-라이브러리-재압축">3. 🤐 JAR 라이브러리 재압축</h1>
+<ol>
+  <li>
+    <p>압축해제한 최상위 경로의 com, META-INF을 다시 zip 파일로 압축한다.</p>
+  </li>
+  <li>
+    <p>zip 파일의 확장자를 .jar 로 수정한다.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>맥의 기본 압축프로그램을 사용 시 .DS_Store 와 __MACOSX 와 같은 파일이 첨부되므로 WinArchiveLite를 사용하거나 콘솔에서 zip 명령어로 직접 압축한다.</p>
+</blockquote>
+
+<h1 id="-️-바이트코드-수정하는-tip">+ 💁‍♂️ 바이트코드 수정하는 Tip</h1>
+<p>바이트코드 명령어의 목록은 여기에서 확인할 수 있다.</p>
+
+<p><strong>위키피디아 링크</strong> : <a href="https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings">https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings</a></p>
+
+<p>바이트코드 읽는 요령을 아주 간단히만 적자면 (간단할 수가 없지만..)</p>
+
+<p>명령어는 보통 {데이터형} + {명령코드(opcode)} 형태로 되어 있는데
+가령 예를들어 정수형 값을 저장한다면 istore, 객체를 저장한다면 astore
+만약 정수형 값을 불러온다면  iload, 객체를 불러온다면 aload 와 같은 식이다.
+또한 상수값의 경우는 iconst와 같이 const 를 이용하여 불러온다.</p>
+
+<p>가령 아래와 같이 Java 코드를 수정한다고 치자.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">return 1;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">return 0;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이를 Before 에서 After로 수정하고 싶다면 아래와 같이 bytecode를 수정하면 된다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">iconst_1</code><br /><code class="language-plaintext highlighter-rouge">ireturn</code></td>
+      <td><code class="language-plaintext highlighter-rouge">iconst_0</code><br /><code class="language-plaintext highlighter-rouge">ireturn</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>사실 일부사례를 더 적었으나…
+단순히 코드와 클래스파일이 정확하게 변형 되는 것이 아니라서
+상황에 따라서 틀릴 수 있는 내용이 포함되어 삭제했다… 😥</p>
+
+<p>바이트코드의 명령어의 정의를 찾아보면 좀 더 도움이 될 수 있다.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fandroid%2F2020%2F10%2F07%2Fdecomplie-jar.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=JAR+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+%EB%9C%AF%EC%96%B4%EA%B3%A0%EC%B9%98%EA%B8%B0+%28.class+%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C+%EC%88%98%EC%A0%95%29%20http%3A%2F%2Flocalhost%3A4000%2Fandroid%2F2020%2F10%2F07%2Fdecomplie-jar.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/android/2020/10/07/decomplie-jar.html&title=JAR+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+%EB%9C%AF%EC%96%B4%EA%B3%A0%EC%B9%98%EA%B8%B0+%28.class+%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C+%EC%88%98%EC%A0%95%29%20%7C%20Androbin+Dev+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=JAR+%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC+%EB%9C%AF%EC%96%B4%EA%B3%A0%EC%B9%98%EA%B8%B0+%28.class+%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C+%EC%88%98%EC%A0%95%29%20%7C%20Androbin+Dev+Blog&body=:%20http://localhost:4000/android/2020/10/07/decomplie-jar.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list"></div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'haenara';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="개발자가 블로그로 세상을 바꾸는 방법" href="/daily/2020/11/15/Geulddo-starting.html">
+            <p>Previous post</p>
+            개발자가 블로그로 세상을 바꾸는 방법
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Android APK 이름에 Git 리비전 태그 붙이기" href="/android/2020/10/03/Tagging-git-on-APK.html">
+            <p>Next post</p>
+            Android APK 이름에 Git 리비전 태그 붙이기
+        </a>
+    </div>
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+   background-image: url('/assets/img/post/20201008_thumb.png');
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>
