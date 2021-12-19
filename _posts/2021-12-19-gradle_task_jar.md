@@ -32,7 +32,21 @@ jar파일 생성하는 법은 지난 포스팅 [Kotlin으로 실행 가능한 JA
 
 ## Task 추가하기
 
+
+다음은 필수 인자로 넣어줍니다.
+
+- 태스크 이름(groovy에서는 태스크 이름, kotlin에서는 String 인자로)
+- main : 메인 메소드 위치
+- classpath : JAR 파일 위치 
+
+그 외에 추가로 다음 인자는 옵션으로 넣어줍니다.
+
+- group : 태스크의 그룹. 없다면 other에 들어갑니다.
+- description : 태스크 설명. 
+- args : 프로그램 인자
+
 ### Groovy인 경우 (build.gradle)
+
 ```groovy
 task sample_task(type: JavaExec) {
     group = "_sample_"
@@ -53,7 +67,7 @@ tasks.register("sample_task", JavaExec::class) {
 }
 ```
 
-> 위와 같이 
+위와 같이 
 만약에 Path에 `/`를 넣어서 윈도우에서 동작하지 않는다면 아래와 같이 path를 사용하여 해결합니다.<br/>
 단 함수위에 Experimental 어노테이션을 추가해야한다.<br/>
 
