@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-12T17:15:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Androbin Dev Blog</title><subtitle>🤖 Android Developer Robin's Dev Blog</subtitle><entry><title type="html">Android 앱에서 ADB 연결 막기</title><link href="http://localhost:4000/kotlin/2021/12/05/adb_detect.html" rel="alternate" type="text/html" title="Android 앱에서 ADB 연결 막기" /><published>2021-12-05T21:00:00+09:00</published><updated>2021-12-05T21:00:00+09:00</updated><id>http://localhost:4000/kotlin/2021/12/05/adb_detect</id><content type="html" xml:base="http://localhost:4000/kotlin/2021/12/05/adb_detect.html">&lt;h1 id=&quot;adb와-보안&quot;&gt;ADB와 보안&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-02T22:26:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Androbin Dev Blog</title><subtitle>🤖 Android Developer Robin's Dev Blog</subtitle><entry><title type="html">신해나라의 2021년 회고</title><link href="http://localhost:4000/daily/2022/01/02/Reviewing_2021.html" rel="alternate" type="text/html" title="신해나라의 2021년 회고" /><published>2022-01-02T21:00:00+09:00</published><updated>2022-01-02T21:00:00+09:00</updated><id>http://localhost:4000/daily/2022/01/02/Reviewing_2021</id><content type="html" xml:base="http://localhost:4000/daily/2022/01/02/Reviewing_2021.html">&lt;h1 id=&quot;2021-연말회고&quot;&gt;2021 연말회고&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_01.jpeg&quot; alt=&quot;-&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;작년, 재작년에도 항상 12월 31일 마지막날에 급하게 회고를 썼습니다. &lt;br /&gt;
+하지만 올해는 연말까지도 바쁜 일정이 계속되어 회고가 늦어버려 해를 넘기고 때늦은 회고를 남기게 되었습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;올해는 작년, 재작년보다도 더 바쁘게 지내고 분명한 성과도 있는 해였지만 모순적이게도 성과에 만족스럽지 못해 아쉬움이 많이 남습니다.&lt;br /&gt;
+일단 가장 큰 문제로 한해가 시작하면서 명확한 목표설정을 하지 못했다는 점이 큰 것 같습니다. &lt;br /&gt;
+&lt;br /&gt;
+따라서 새로운 2022년에는 잊지말고 반드시 &lt;strong&gt;명확한 목표설정&lt;/strong&gt;을 제일 먼저 해야할 것 같습니다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;한해-요약&quot;&gt;한해 요약&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_02.png&quot; alt=&quot;summary&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;작년과 재작년 회고와 비교해보면서 읽어보니 확실히 올해는 아쉬운 부분이 많은 것 같습니다. &lt;br /&gt;
+그래도 중간중간 꾸준히 무언가를 하려고 노력한 흔적이 보이긴 하는 것 같긴 한데 &lt;br /&gt;
+연말로 갈수록 힘이 빠지는 지 활동이 눈에띄게 저조해 졌던 것 같습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;올 해는 유독 가정사도 많았습니다. 상반기에는 장모님 장례를 치르고 하반기에는 둘째가 태어났습니다. &lt;br /&gt;
+그래서 회사로부터 위로와 축하를 많이 받았고 결과적으로 휴가도 본의아니게 많이 쓴 한해가 되었습니다. &lt;br /&gt;
+또한 첫째는 유치원에 다니기 시작하면서 이전보다 훨씬 성장한 모습을 보였습니다. &lt;br /&gt;
+그런 와중에 코로나로 인해 1년 내내 재택근무를 해서 오히려 능률은 떨어지고 &lt;br /&gt;
+정작 책상앞에 앉아있는 시간은 더 늘어나고 감정적으로도 많이 지친 한해였습니다.&lt;br /&gt;
+체력적으로도 많이 부족함을 느끼고 건강 이슈도 있었던걸 반성하며 내년에는 건강도 챙겨보려고 합니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;성과&quot;&gt;성과&lt;/h1&gt;
+
+&lt;h2 id=&quot;주업무&quot;&gt;주업무&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_03.png&quot; alt=&quot;classnote&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;드디어 올해 5월 클래스노트 앱 출시를 했습니다. 🥳 🎉🎉🎉&lt;br /&gt;
+제 손으로 직접 처음 설계부터 시작하여 출시까지 완료한 경험이었기 때문에 무엇보다도 의미있는 성과였습니다.&lt;br /&gt;
+그러나 출시만 하고 이후 사업적 이슈로 인해 서비스 운영으로 이어지지 못하게 되어 아쉬움이 많이 남습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;사이드프로젝트&quot;&gt;사이드프로젝트&lt;/h2&gt;
+
+&lt;p&gt;그 외에 사내 업무를 위한 아래 사이드프로젝트 2가지를 진행하여 업무효율을 상당히 늘릴 수 있었습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;stringer&quot;&gt;Stringer&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모바일 다국어 관리 프로그램&lt;/li&gt;
+  &lt;li&gt;100% TDD 적용하여 코틀린으로 개발&lt;/li&gt;
+  &lt;li&gt;iOS/Android 상용 프로젝트에 실제 적용하여 사용 중&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;wafflepan&quot;&gt;WafflePan&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프래그먼트, 뷰모델, 레이아웃 파일 생성 프로그램&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;세미나&quot;&gt;세미나&lt;/h2&gt;
+
+&lt;p&gt;사내 세미나를 5회정도 실시했습니다만&lt;br /&gt;
+이전처럼 회사 전체가 아닌 팀내 공유 위주로 실시하였습니다. &lt;br /&gt;
+덕분에 긴 기간 준비하는 스터디 대신 단발성 세미나로만 진행하게 되었습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fireabase 내부배포 자동화&lt;/li&gt;
+  &lt;li&gt;Rx키즈노트 훑어보기&lt;/li&gt;
+  &lt;li&gt;Stringer 다국어 관리프로그램 소개&lt;/li&gt;
+  &lt;li&gt;Unit 테스트에 대한 단상&lt;/li&gt;
+  &lt;li&gt;for loop는 이제 그만 안녕&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;아무래도 팀내 공유위주로 하다보니 부담과 준비시간이 적게 들었던 것 같습니다.&lt;br /&gt;
+그래도 사내세미나 했던 주제를 글로 정리하여 글또 활동과 엮은 덕분에 &lt;br /&gt;
+최소비용으로 최대성과를 낼수 있었던 것 같아서 이 부분은 약간 만족스럽습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;글또&quot;&gt;글또&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/geulddo.png&quot; alt=&quot;geultto&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;올해는 상반기에는 글또5기, 하반기에는 6기 활동으로 거의 한해 내내 글또에 참여했습니다.&lt;br /&gt;
+그에 비해 6기때는 5기보다 참여율이 저조했는데 &lt;br /&gt;
+5기 활동으로 5개, 6기 활동으로 6개로 총 11개의 글을 작성하였습니다.&lt;br /&gt;
+한달에 한번꼴로 작성한 셈인데 아쉬움이 많이 남습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;성장&quot;&gt;성장&lt;/h1&gt;
+
+&lt;p&gt;올한해 새로이 배운 기술 스택은&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt; Gradle Kotlin DSL&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt; Ktor &amp;amp; Kotlin-Serialzation&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt; Jetpack Compose&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt; Dagger &amp;amp; Hilt&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt; Coroutine&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;명확한 목표와 계획이 없다보니 기술스택은 거의 익히지 못해서 아쉽습니다.&lt;br /&gt;
+특히나 작년부터 목표로 하던 대거를 아직도 익히지 못한 점과 &lt;br /&gt;
+제트팩 컴포즈는 올해 좋은 기회가 있었음에도 놓친 부분이 아쉬움으로 많이 남습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;대신이라고 하기엔 뭐하지만&lt;br /&gt;
+RxJava와 Clean Architecture, TDD는 실전에서 사용하면서 실력이 많이 늘어난 것 같습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;github&quot;&gt;GitHub&lt;/h1&gt;
+
+&lt;h2 id=&quot;개인-계정&quot;&gt;개인 계정&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_04.png&quot; alt=&quot;github_private&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;올해는 잔디가 너무 적었네요.&lt;br /&gt;
+그나마의 잔디도 주로 2주에 한번 글또 활동을 기술블로그를 작성한 것 위주인 것 같습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;회사-계정&quot;&gt;회사 계정&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_05.png&quot; alt=&quot;github_work&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;올해는 아무래도 회사 일만 죽어라고 한 것 같습니다.&lt;br /&gt;
+올해는 주말에도 꽤나 일을 했군요.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;총평&quot;&gt;총평&lt;/h1&gt;
+
+&lt;p&gt;굳이 점수를 매기자면 100점 만점에 50정 정도가 되겠네요. 🤔&lt;br /&gt;
+불분명한 목표설정으로 인해 기대만큼의 성과를 얻지는 못했지만&lt;br /&gt;
+회고를 위해 정리하다보니 나름의 성과도 있고 올해도 부지런하기 위해 최선을 다했던 것 같습니다. &lt;br /&gt;
+아쉽고 부족했던부분은 2022년에 채우도록 반성하고 더 노력해야겠습니다.&lt;br /&gt;
+2021년의 해나라야 수고 많았고 고생했어.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20220102_06.jpeg&quot; alt=&quot;children&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 모든 영광을 밝은 모습으로 건강히 자라준 찬이와 단이에게 감사를 돌립니다.&lt;br /&gt;
+너무너무 사랑한다 우리 아가들&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Daily" /><summary type="html">2021 연말회고</summary></entry><entry><title type="html">Android 앱에서 ADB 연결 막기</title><link href="http://localhost:4000/kotlin/2021/12/05/adb_detect.html" rel="alternate" type="text/html" title="Android 앱에서 ADB 연결 막기" /><published>2021-12-05T21:00:00+09:00</published><updated>2021-12-05T21:00:00+09:00</updated><id>http://localhost:4000/kotlin/2021/12/05/adb_detect</id><content type="html" xml:base="http://localhost:4000/kotlin/2021/12/05/adb_detect.html">&lt;h1 id=&quot;adb와-보안&quot;&gt;ADB와 보안&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/20211205_01.jpeg&quot; alt=&quot;change&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -185,7 +331,80 @@ WiFi를 통한 무선 ADB 연결을 막을 수는 없기 때문입니다..!!😱
 다만 일전에 취약점 점검을 위해 모바일 앱 모의해킹을 진행한 적이 있는데&lt;br /&gt;
 담당자가 WiFi ADB를 모르는 사람이었습니다. (100% 실화)&lt;br /&gt;
 &lt;br /&gt;
-따라서 꼭 의미 없는 것만은 아닐지도 모르겠습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Kotlin" /><summary type="html">ADB와 보안</summary></entry><entry><title type="html">진보 개발자, 보수 개발자</title><link href="http://localhost:4000/developer/2021/11/07/jb.html" rel="alternate" type="text/html" title="진보 개발자, 보수 개발자" /><published>2021-11-07T23:00:00+09:00</published><updated>2021-11-07T23:00:00+09:00</updated><id>http://localhost:4000/developer/2021/11/07/jb</id><content type="html" xml:base="http://localhost:4000/developer/2021/11/07/jb.html">&lt;h1 id=&quot;진보-개발자-보수-개발자&quot;&gt;진보 개발자? 보수 개발자?&lt;/h1&gt;
+따라서 꼭 의미 없는 것만은 아닐지도 모르겠습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Kotlin" /><summary type="html">ADB와 보안</summary></entry><entry><title type="html">Android 프로젝트에 task로 유틸 프로그램 실행하기</title><link href="http://localhost:4000/kotlin/2021/12/05/gradle_task_jar.html" rel="alternate" type="text/html" title="Android 프로젝트에 task로 유틸 프로그램 실행하기" /><published>2021-12-05T21:00:00+09:00</published><updated>2021-12-05T21:00:00+09:00</updated><id>http://localhost:4000/kotlin/2021/12/05/gradle_task_jar</id><content type="html" xml:base="http://localhost:4000/kotlin/2021/12/05/gradle_task_jar.html">&lt;h1 id=&quot;jar-파일을-gradle-task로-실행하기&quot;&gt;Jar 파일을 Gradle task로 실행하기&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20211219_01.jpeg&quot; alt=&quot;GRADLE&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jar-파일을-gradle-task로&quot;&gt;Jar 파일을 Gradle task로?&lt;/h2&gt;
+
+&lt;p&gt;유틸프로그램 또는 스크립트를 Java 또는 Kotlin으로 작성해서 &lt;br /&gt;
+간단한 업무 자동화를 적용해보려는 시도를 해보신 적이 있으신가요?&lt;br /&gt;
+Kotlin DSL을 활용한다면 물론 jar 파일 없이도 코틀린을 gradle에서 실행할 수 있지만&lt;br /&gt;
+굳이 그러지 않더라도 별도의 jar파일로 프로젝트에 추가하여 gradle에서 task로 실행할 수 있습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;어떤-식으로-활용할-수-있나요&quot;&gt;어떤 식으로 활용할 수 있나요?&lt;/h2&gt;
+&lt;p&gt;저는 Google Sheet에 정리된 다국어 목록을 안드로이드 리소스 파일로 변환해주는 유틸 프로그램과&lt;br /&gt;
+프로젝트에서 자주 사용하는 코드 템플릿을 한꺼번에 자동으로 생성해주는 유틸 프로그램을 코틀린으로 작성하여&lt;br /&gt;
+해당 스크립트를 jar 파일로 실행하여 사용하고 있습니다.&lt;br /&gt;
+jar파일 생성하는 법은 지난 포스팅 &lt;a href=&quot;https://haenarashin.github.io/kotlin/2021/07/31/Excutable-jar.html&quot;&gt;Kotlin으로 실행 가능한 JAR 파일 만들기&lt;/a&gt;을 참고해주세요.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;task-추가하기&quot;&gt;Task 추가하기&lt;/h2&gt;
+
+&lt;p&gt;다음은 필수 인자로 넣어줍니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;태스크 이름(groovy에서는 태스크 이름, kotlin에서는 String 인자로)&lt;/li&gt;
+  &lt;li&gt;main : 메인 메소드 위치&lt;/li&gt;
+  &lt;li&gt;classpath : JAR 파일 위치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그 외에 추가로 다음 인자는 옵션으로 넣어줍니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;group : 태스크의 그룹. 없다면 other에 들어갑니다.&lt;/li&gt;
+  &lt;li&gt;description : 태스크 설명.&lt;/li&gt;
+  &lt;li&gt;args : 프로그램 인자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;groovy인-경우-buildgradle&quot;&gt;Groovy인 경우 (build.gradle)&lt;/h3&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sample_task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;type:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaExec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_sample_&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;샘플 유틸 태스크&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;classpath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$rootDir/Util.jar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dev.haenara.util.MainKt'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'arg1'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'arg2'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;kotlin-dsl-인-경우-buildgradlekts&quot;&gt;Kotlin DSL 인 경우 (build.gradle.kts)&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sample_task&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaExec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;_sample_&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;샘플 유틸 태스크&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;classpath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$rootDir/Util.jar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;dev.haenara.util.MainKt&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;arg1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;arg2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 
+만약에 Path에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;를 넣어서 윈도우에서 동작하지 않는다면 아래와 같이 path를 사용하여 해결합니다.&lt;br /&gt;
+단 함수위에 Experimental 어노테이션을 추가해야한다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@OptIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ExperimentalPathApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sample_task&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaExec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;classpath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Util.jar&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;예제-실행&quot;&gt;예제 실행&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/20211219_02.png&quot; alt=&quot;change&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;gradle 탭에 다음과 같이 Task가 생성된 것을 확인할 수 있습니다.&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Kotlin" /><summary type="html">Jar 파일을 Gradle task로 실행하기</summary></entry><entry><title type="html">진보 개발자, 보수 개발자</title><link href="http://localhost:4000/developer/2021/11/07/jb.html" rel="alternate" type="text/html" title="진보 개발자, 보수 개발자" /><published>2021-11-07T23:00:00+09:00</published><updated>2021-11-07T23:00:00+09:00</updated><id>http://localhost:4000/developer/2021/11/07/jb</id><content type="html" xml:base="http://localhost:4000/developer/2021/11/07/jb.html">&lt;h1 id=&quot;진보-개발자-보수-개발자&quot;&gt;진보 개발자? 보수 개발자?&lt;/h1&gt;
 
 &lt;p&gt;오랜만에 다시 글을 쓰는 기념으로 오늘은 좀 가벼운 주제를 다뤄볼까 합니다.
 개발자들에게도 진보/보수가 나뉜다는 사실 들어보셨나요?&lt;br /&gt;
@@ -1324,406 +1543,4 @@ Retrofit이 Callback, RxJava, 코루틴 모두 적용할 수 있다는 점에서
 즉 쓸만해보이고 앞으로 더욱 쓸만해보이지만&lt;br /&gt;
 아직까지는 (특히나 클라이언트 사이드에서는) 좀 성숙도가 떨어지지 않나?🤔 하는 생각이 듭니다.&lt;br /&gt;
 공식적으로 미는 프레임워크인 만큼 앞으로의 기대가 크지만&lt;br /&gt;
-당장 상용 프로젝트에 적용하기에는 조금 이른 감이 있다고 생각합니다.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Android," /><category term="Kotlin," /><category term="Ktor" /><summary type="html">Ktor가 뭔데?</summary></entry><entry><title type="html">[라뗴칼럼] 백부장님의 2가지 가르침</title><link href="http://localhost:4000/latte/2021/02/21/Latte_back.html" rel="alternate" type="text/html" title="[라뗴칼럼] 백부장님의 2가지 가르침" /><published>2021-02-21T22:42:00+09:00</published><updated>2021-02-21T22:42:00+09:00</updated><id>http://localhost:4000/latte/2021/02/21/Latte_back</id><content type="html" xml:base="http://localhost:4000/latte/2021/02/21/Latte_back.html">&lt;blockquote&gt;
-  &lt;p&gt;백부장님의 2가지 가르침을 공유합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;백부장님은&quot;&gt;백부장님은…&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210221_01.jpeg&quot; alt=&quot;master_beck&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;전 회사에서 서버개발자로 함께 일한 분이셨다.&lt;br /&gt;
-나와는 두바퀴 띠동갑이셨는데 ‘그냥 형처럼 생각해’라고 말씀하시며 잘 챙겨주셨다.&lt;br /&gt;
-금융과 SI쪽에서 굵직한 경력들이 있는 정말로 무협지에 나오는 재야의 고수와 같은 분이셨다.&lt;br /&gt;&lt;br /&gt;
-코딩도 코딩이지만 짬에서 나오는 도메인 이해와 이를 통한 통찰력이 어마어마하신 분이셨다.&lt;br /&gt;
-척하면 척이고 말했다 하면 예언처럼 이뤄지곤 하는 정말 신기한 분이셨는데&lt;br /&gt;
-회사에서에서도 핵심 시스템을 유일하게 이해하고 계신 분이셨다. &lt;br /&gt;
-&lt;br /&gt;
-나에게는 스승과도 같은 존재셨다. 떄때로 정말 많은 조언을 해주셨는데&lt;br /&gt;
-퇴사하기 직전에 술 한잔 사주시면서 지금까지도 기억에 남는 두가지 가르침을 남겨주셨다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;‘이 사람이 무슨 생각일까?’를 항상 고민해라&lt;/li&gt;
-  &lt;li&gt;헤게모니를 나의 것으로 만들어라&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;사실 이 가르침을 배운지는 좀 되었지만&lt;br /&gt;
-지금까지도 잘 실천하지 못하기도 하고해서&lt;br /&gt;
-스스로에게 되새기고자 기억나는 대로 내용을 정리해보았다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1-이-사람이-무슨-생각일까를-항상-고민해라&quot;&gt;1. ‘이 사람이 무슨 생각일까?’를 항상 고민해라&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210221_03.jpeg&quot; alt=&quot;think&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;첫번째 가르침은 바로 대화할 때 말 속의 진짜 의도를 파악하는 것이 항상 중요하다고 말씀해주셨다. &lt;br /&gt;
-이는 단순히 단어 뜻대로 해석하는 것이 아니라 이 말을 하는 이유와 목적을 파악해야 한다는 의미였다.&lt;br /&gt;
-&lt;br /&gt;
-예를 들어 동료가 자신의 실수를 숨기기 위해서 무언가 엉뚱한 요청을 한다던가&lt;br /&gt;
-고객이 스스로 무엇이 필요한지 잘 모르는 상태로 도움을 요청하는 경우 등&lt;br /&gt;
-말과 실제 목적이 다른 경우가 종종 생기기 마련이기 때문에&lt;br /&gt;
-백부장님은 이 말에 속지말고 숨은 속 뜻과 목적을 최대한 해아리는 자세가 필요하다고 하셨다.&lt;br /&gt;
-&lt;br /&gt;
-나는 이 얘기를 듣고 스티브 잡스가 남긴 이 이야기가 떠올랐다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;대부분 사람들은 제품을 보여주기 전까진 자신들이 원하는 게 뭔지도 정확히 모른다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;
-고객의 말을 곧이곧대로 이해하는 대신 진짜로 고객의 니즈를 찾아내야 한다는 교훈을 시사하기도 한다.&lt;br /&gt;
-다만 고객 뿐 아니라 동료, 상사, 다른 사람들 조차도 &lt;br /&gt;
-정확한 이해 없이 또는 체면이나 다른 이유로 실제 말하는 것과 다른 의도가 있을 수 있다.&lt;br /&gt;
-&lt;br /&gt;
-사실 나도 비슷한 실수를 많이 했던 기억이 난다.&lt;br /&gt;
-사업팀 동료로부터 개발계 테스트앱을 배포해달라는 개인적인 부탁을 받은 적이 있었는데&lt;br /&gt;
-당연히 테스트를 위해서일거라 생각하고 내부망에서만 테스트가 가능한 앱을 배포했었다.&lt;br /&gt;
-그런데 알고보니 테스트가 필요해서가 아니라 제휴영업을 위해 잠재고객에게 전달할 샘플이 필요한 것이었다.&lt;br /&gt;
-결과적으로 두어번의 추가 배포 이후에서야 최종 목적을 듣게되었고 &lt;br /&gt;
-그제서야 실제로 편의점에서 시연가능한 운영계 데모앱과 매뉴얼을 전달했다.&lt;br /&gt;
-이 일이 있고나서부터는 배포 부탁을 받으면 배포이유를 꼭 듣고 배포를 하게 되었다.&lt;br /&gt;
-&lt;br /&gt;
-이 가르침은 최대한 몸에 배도록 노력하지만 &lt;br /&gt;
-지금도 가끔씩 ‘아차!😧’ 하며 되새길 때가 있다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2-헤게모니를-나의-것으로-만들어라&quot;&gt;2. 헤게모니를 나의 것으로 만들어라&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210221_02.jpeg&quot; alt=&quot;hegemony&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;헤게모니란&quot;&gt;헤게모니란?&lt;/h3&gt;
-
-&lt;p&gt;백부장님은 헤게모니란 표현을 많이 사용하셨는데 여기서는 쉽게 &lt;strong&gt;주도권&lt;/strong&gt; 정도의 의미로 이해하면 된다. &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;다시 말해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;헤게모니를 나의 것으로 만들어라&lt;/code&gt;는 주도권을 가져오란 뜻인데&lt;br /&gt;
-좀 더 구체적으로 이야기하자면 도메인과 시스템의 이해를 통해 업무 관계자들 사이에서 주도권을 가져오라는 의미다.&lt;br /&gt;
-&lt;br /&gt;
-헤게모니를 가져오는 방법은 아래와 같았다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;프로젝트-시작-첫-일주일에-바짝-고생해라&quot;&gt;프로젝트 시작 첫 일주일에 바짝 고생해라&lt;/h3&gt;
-
-&lt;p&gt;백부장님이 SI를 뛰던 시절에 보통 프로젝트에 처음 투입이 되면&lt;br /&gt;
-보통은 처음에 여유롭고 뒤로 갈수록 바빠진다고 하셨다.&lt;br /&gt;
-&lt;br /&gt;
-하지만 백부장님은 반대로 첫번째 주에 바짝 고생하는 것으로 헤게모니를 가져올 수 있다고 하셨다.&lt;br /&gt;
-무슨 소리냐면 첫번째 주에 마치 프로토타이핑 또는 목업처럼 &lt;br /&gt;
-&lt;strong&gt;프로젝트의 핵심 플로우을 한번 설계해보는 것이다.&lt;/strong&gt;&lt;br /&gt;
-이런 과정을 통해 프로젝트와 시스템에 대한 이해를 갖추고 실제 데이터 흐름을 눈으로 봐서&lt;br /&gt;
-설계 단계에서의 실수를 미리 찾아내는 과정이 필요하다는 뜻이다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;백부장님은 이 과정을 &lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;한 싸이클을 돈다&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;
-라고 표현하셨다.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;한-싸이클을-도는-것이-핵심이다&quot;&gt;한 싸이클을 도는 것이 핵심이다&lt;/h4&gt;
-
-&lt;p&gt;한 싸이클을 돌았을 때의 효과는 다음과 같다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;시스템에 대한 전체적인 맥락을 이해할 수 있다.&lt;/li&gt;
-  &lt;li&gt;설계 단계에서 잘못된 부분을 남들보다 먼저 찾을 수 있다.&lt;/li&gt;
-  &lt;li&gt;상세 작업단위에서 난이도를 미리 파악하여 예상 일정을 보다 정확하게 산출할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;시스템에 대한 전체적인 맥락의 이해가 있다면&lt;br /&gt;
-회의와 같은 자리에서 자연스럽게 남들보다 유리한 위치에 있게 되고&lt;br /&gt;
-또한 설계 단계에서의 실수를 먼저 찾아서 이후에 발생할 일정 손실을 사전에 막아낼 수 있으며&lt;br /&gt;
-어느 작업이 일정을 잡아먹을 지 미리 알고 있게 된다는 것이다.&lt;br /&gt;
-&lt;br /&gt;
-이러한 과정이 반복되다 보면 어느샌가 팀 내에서 이미 전문가로 인정받으며&lt;br /&gt;
-자연스럽게 헤게모니를 가져올 수 있게 된다는 것이 백부장님의 설명이다.&lt;br /&gt;
-&lt;br /&gt;
-일례로 회의 때, 다른 사람과 시스템에 관해 논쟁이 붙이 마련인데&lt;br /&gt;
-이미 이럴 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;나는 해봤으니까&lt;/code&gt; 남들보다 훨씬 더 깊게 이해하고 있게되고&lt;br /&gt;
-이런 논쟁을 지켜보던 사람들이 결국 자신을 인정할 수 밖에 없게 된다는 것이다.&lt;br /&gt;
-&lt;br /&gt;
-또 재밌는 점은 이러한 논쟁에서 굳이 설득할 필요 없다고 하셨다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;내가-확신이-있지만-다른-사람이-동의하지-못한다면-굳이-설득하려고-애쓰지-마라&quot;&gt;내가 확신이 있지만 다른 사람이 동의하지 못한다면 굳이 설득하려고 애쓰지 마라&lt;/h4&gt;
-
-&lt;p&gt;나는 굳이 설득하지 말아야 할 이유를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'틀리면 쪽팔리니까?'&lt;/code&gt; 정도로 생각했는데&lt;br /&gt;
-백부장님의 답은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'어차피 내가 맞을테니까'&lt;/code&gt; 였다.&lt;br /&gt;
-&lt;br /&gt;
-한 싸이클을 제대로 돌아서 이미 시스템에 대한 이해를 하고 있다면&lt;br /&gt;
-상대가 틀린 소리라는걸 알고 있다 하더라도 모두가 이 사실을 언젠간 알게 될텐데&lt;br /&gt;
-굳이 힘들게 설득하려고 애쓸 필요 없다는 것이다.&lt;br /&gt;
-&lt;br /&gt;
-이런 식의 과정을 몇번 반복하고 나면&lt;br /&gt;
-어느샌가 내가 설득하려고 애쓰지 않아도 사람들이 내 말을 신뢰하게 되고&lt;br /&gt;
-결과적으로 아까 말한 &lt;strong&gt;헤게모니&lt;/strong&gt;를 가져오게 된다는 것이 백부장님의 설명이다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;그럼-그-헤게모니로-뭘-하면-될까요&quot;&gt;그럼 그 헤게모니로 뭘 하면 될까요?&lt;/h3&gt;
-
-&lt;p&gt;백부장님은 이러한 헤게모니를 보통 일정조율에 사용하셨다고 하셨다&lt;br /&gt;
-&lt;br /&gt;
-개발자들(특히 SI)에게는 일정이 목숨인데&lt;br /&gt;
-적은 공수로 이른바 &lt;strong&gt;딜&lt;/strong&gt;을 하며 필요한 곳에 더 일정을 얻는 식이었다고 하셨다.&lt;br /&gt;
-&lt;br /&gt;
-난이도 파악이 되어 어떤 요구사항이 시간이 오래걸릴지 알고 있으므로&lt;br /&gt;
-클라이언트와의 일정 조율 때 협상에서 훨씬 유리하게 작용한다고 하셨다.&lt;br /&gt;
-쉽게 말해 &lt;strong&gt;어려운 기능&lt;/strong&gt;은 좀 덜어내고 &lt;strong&gt;쉬운 기능&lt;/strong&gt;을 좀 얹어주는 식으로&lt;br /&gt;
-클라이언트와의 줄다리기로 일정을 벌어낼 수 있다는 뜻이었다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;나의-반성&quot;&gt;나의 반성&lt;/h1&gt;
-
-&lt;p&gt;사실 아직까지도 이 헤게모니에 대한 가르침은 실천하고 있지 못하다.&lt;br /&gt;
-&lt;br /&gt;
-솔직히 말로는 쉽지만 &lt;br /&gt;
-&lt;strong&gt;단 일주일만에 시스템의 핵심 플로우를 그려보는 것이 보통일이 아니다.&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-또한 &lt;strong&gt;예상 공수를 산정하는 것 조차 쉬운 일이 아니다.&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-지금 회사에서 하고 있는 프로젝트 초반에 이런 과정을 거치지 않았고&lt;br /&gt;
-결과적으로 지금 뼈빠지게 야근하면서 그때그때 개발하다가 설계상의 미스를 찾곤 한다.&lt;br /&gt;
-이것이 나뿐만 아니라 팀 전체에게 결과적으로 영향을 미치게 되는데&lt;br /&gt;
-이럴 때 마다 백부장님의 가르침을 떠올리며 반성하게 된다.&lt;br /&gt;
-&lt;br /&gt;
-이 부분은 습관보다도 노력과 연습이 필요한 가르침인 것 같다.&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Latte" /><summary type="html">백부장님의 2가지 가르침을 공유합니다.</summary></entry><entry><title type="html">코드 한줄로 안드로이드 SharedPreference를 암호화하는 방법</title><link href="http://localhost:4000/android,/security/2021/01/24/brick.html" rel="alternate" type="text/html" title="코드 한줄로 안드로이드 SharedPreference를 암호화하는 방법" /><published>2021-01-24T12:42:00+09:00</published><updated>2021-01-24T12:42:00+09:00</updated><id>http://localhost:4000/android,/security/2021/01/24/brick</id><content type="html" xml:base="http://localhost:4000/android,/security/2021/01/24/brick.html">&lt;blockquote&gt;
-  &lt;p&gt;당신의 안드로이드 앱 데이터는 안전한가요?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;-데이터를-저장할-땐-반드시-암호화가-필요합니다&quot;&gt;🔐 데이터를 저장할 땐 반드시 암호화가 필요합니다.&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_01.jpeg&quot; alt=&quot;security&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.kisa.or.kr/public/laws/laws3_View.jsp?cPage=1&amp;amp;mode=view&amp;amp;p_No=259&amp;amp;b_No=259&amp;amp;d_No=101&amp;amp;ST=T&amp;amp;SV=&quot;&gt;KISA의 개인정보 안전성 확보조치 기준&lt;/a&gt;에 따르면 &lt;br /&gt;
-주민번호나 비밀번호와 같은 개인 정보를 모바일 단말에 저장할 때는 반드시 모두 암호화 해야합니다.&lt;br /&gt;
-&lt;br /&gt;
-만약 보안에 민감한 서비스라서 모바일 보안 취약점 검사를 받는다면&lt;br /&gt;
-위에 서술된 민감한 정보 뿐 아니라 전화번호, 생년월일, 이름 등을 포함한&lt;br /&gt;
-사실상 거의 모든 정보를 암호화 해야합니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;따라서 단말에 저장하는 데이터는 &lt;strong&gt;전부 암호화&lt;/strong&gt;하는 것이 정신건강에 이롭습니다.&lt;br /&gt;
-애초부터 암호화 하는 습관을 들이면 더더욱 좋구요 👍&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;️-encryptedsharedpreferences&quot;&gt;👮‍♂️ EncryptedSharedPreferences&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_jetpack.png&quot; alt=&quot;jetpack&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Android Jetpack에 포함된 &lt;a href=&quot;https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences&quot;&gt;EncryptedSharedPreferences&lt;/a&gt;를 이용하면&lt;br /&gt;
-복잡한 구현 없이도 손쉽게 &lt;strong&gt;SharedPreferences 데이터를 암호화&lt;/strong&gt;할 수 있습니다. &lt;br /&gt;
-&lt;del&gt;갓드로이드킹트팩&lt;/del&gt;&lt;br /&gt;
-&lt;br /&gt;
-비록 알파버전이나 사실상 구글 공식 라이브러리라서 안심하고 사용할 수 있고&lt;br /&gt;
-기존의 SharedPreferences를 상속받고 있어서 처음 호출하는 부분만 수정하면&lt;br /&gt;
-이후에 데이터를 읽고 쓰는 과정에서의 수정은 아예 없기 떄문에 무척 편리합니다.&lt;br /&gt;
-&lt;br /&gt;
-실제로 사용해보면 키값과 데이터가 모두 암호화 되는 것을 확인하실 수 있습니다.&lt;br /&gt;
-&lt;br /&gt;
-그럼 한번 직접 적용해볼까요?&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1-buildgradleapp에-의존성-추가&quot;&gt;1. build.gradle(app)에 의존성 추가&lt;/h2&gt;
-
-&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.security:security-crypto:1.0.0-alpha02'&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;app 수준의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; 의 dependencies에 추가해주면 됩니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-코드상에서-encryptedsharedpreferences를-호출하기&quot;&gt;2. 코드상에서 EncryptedSharedPreferences를 호출하기&lt;/h2&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;masterKeyAlias&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MasterKeys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getOrCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MasterKeys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AES256_GCM_SPEC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;sharedPreferences&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EncryptedSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&quot;secret_shared_prefs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 파일이름을 입력하세요&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;masterKeyAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nc&quot;&gt;EncryptedSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrefKeyEncryptionScheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AES256_SIV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nc&quot;&gt;EncryptedSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrefValueEncryptionScheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AES256_GCM&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Editor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;edit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EncryptedSharedPreferences&lt;/code&gt;가 이미 SharedPreferences 이므로 이후에는 &lt;br /&gt;
-기존에 쉐어드프리퍼런스를 사용하던 곳에서 데이터를 읽고 쓰는 코드는 동일하므로&lt;br /&gt;
-별도의 코드 수정 없이 기존에 사용하시던 대로 사용하면 됩니다.&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;-그런데-말입니다&quot;&gt;🤔 그런데 말입니다&lt;/h1&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EncryptedSharedPreferences&lt;/code&gt;를 적용하고나서 저장한 모든 데이터는 암호화 되겠지만&lt;br /&gt;
-이미 평문으로 저장된 데이터를 암호화 해주지는 않습니다 😭&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그리고 안타깝게도 보통 이 글을 읽고 계신분이라면 &lt;br /&gt;
-이미 배포되어 사용자 단말에 저장된 데이터의 암호화가 필요하신 분들이 많으실 것 같습니다.&lt;br /&gt;
-&lt;br /&gt;
-이미 배포된 앱이라서 사용자가 데이터를 평문으로 저장하고 있다면&lt;br /&gt;
-이 &lt;strong&gt;저장된 데이터를 전부 암호화 하는 이관작업&lt;/strong&gt;이 반드시 필요합니다.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;
-여러가지 방법이 있을 수 있겠지만 이 글에서는 가장 간단한&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;기존 데이터를 삭제하고&lt;/li&gt;
-  &lt;li&gt;새로운 파일에 암호화 해서 복사&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;하는 방법을 소개드리겠습니다.&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;-기존-데이터-이관하기&quot;&gt;📨 기존 데이터 이관하기&lt;/h2&gt;
-
-&lt;p&gt;기존에 이미 사용하고 있는 데이터를 암호화 하는 문제는 또 별개의 문제입니다&lt;br /&gt;
-&lt;br /&gt;
-가장 간단한 방법은 기존의 데이터를 전부 암호화하여 복사하고 기존의 데이터를 삭제하여 &lt;br /&gt;
-무조건 암호화 된 데이터만 접근하도록 하는 방식입니다.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;⚠️ 복사하고 기존 데이터를 삭제하는 방식이므로 암호화 할 파일이름과 기존 파일이름은 달라야 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 암호화 되지 않은 레거시 데이터&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;legacy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SharedPreferences&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MODE_PRIVATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;entries&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;legacy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entries&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 모든 데이터를 복사한다.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// editor는 EncryptedSharedPreferences의 editor &lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;forEach&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putLong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Float&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putBoolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;putStringSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;복사를 다했다면 기존의 평문 데이터를 전부 지워버립시다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;legacy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;edit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;그런데-잠깐-최소지원이-api23-이라구요---&quot;&gt;그런데 잠깐, 최소지원이 api23 이라구요? 😱 😱 😱&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_no.gif&quot; alt=&quot;no_please_no&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;네 그렇습니다. &lt;br /&gt;
-마시멜로이하는 이 방법으로는 할 수 가 없기 때문에&lt;br /&gt;
-결국 새로운 암호화 모듈을 만들어서 구현해야 합니다.😱&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;문제는 아직까지도 많은 앱들의 23미만의 앱을 지원하고 있기 때문에&lt;br /&gt;
-기껏 EncryptedSharedPreferences가 있어도 활용하기가 어렵다는 점이 가장 큰 문제입니다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;️-그럼-이제-어떡하죠&quot;&gt;🤷‍♂️ 그럼 이제 어떡하죠?&lt;/h2&gt;
-
-&lt;p&gt;아직 방법이 있습니다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/HaenaraShin/BrickSharedPreference&quot;&gt;BrickSharedPreferences&lt;/a&gt;를 사용해보세요!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;bricksharedpreferences가-뭔데&quot;&gt;BrickSharedPreferences가 뭔데?&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_brick.png&quot; alt=&quot;BrickSharedPreferences&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;api-레벨-상관-없이-sharedpreferences를-암호화해주는-라이브러리-입니다&quot;&gt;Api 레벨 상관 없이 SharedPreferences를 암호화해주는 라이브러리 입니다.&lt;/h4&gt;
-
-&lt;p&gt;minSdk 14로 낮은 레벨까지 지원하며&lt;br /&gt;
-23 이상이라면 제트팩의 EncryptedSharedPreferences를 사용하고&lt;br /&gt;
-23 미만이라면 커스텀 암호화 SharedPreferences를 이용하는 보안 라이브러리 입니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;또한 추가로 위에서 설명한 ‘기존 데이터 이관’을 &lt;strong&gt;단 한줄로 해결할 수 있습니다.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1-buildgradleapp에-의존성-추가-1&quot;&gt;1. build.gradle(app)에 의존성 추가&lt;/h2&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haenara&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bricksharedpref&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0.2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security-crypto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha02&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-코드상에서-bricksharedpreferences를-호출하기&quot;&gt;2. 코드상에서 BrickSharedPreferences를 호출하기&lt;/h2&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 기존 SharedPreferences를 가져오는 방법에 &quot;Brick&quot;만 앞에 붙이면 된다. &lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;mSharedPreferences&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getBrickSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MODE_PRIVATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기존에 쉐어드프리퍼런스 호출 시에 코틀린에서 사용하던 코드와 거의 유사한데, &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getSharedPreferences&lt;/code&gt;를&lt;br /&gt; 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getBrickSharedPreferences&lt;/code&gt;로 고친 것이 전부입니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;BrickSharedPreferences도 기존에 쉐어드프리퍼런스를 사용하던 곳에서 데이터를 읽고 쓰는 코드는 동일하므로&lt;br /&gt;
-별도의 코드 수정 없이 기존에 사용하시던 대로 사용하면 됩니다.&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-기존-데이터-이관하기&quot;&gt;3. 기존 데이터 이관하기&lt;/h2&gt;
-
-&lt;h4 id=&quot;단-한줄이면-됩니다&quot;&gt;단 한줄이면 됩니다.&lt;/h4&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 저장되어 있는 데이터를 전부 암호화&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;migrateEncryptedSharedPreferences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;요거 한줄이면 해결됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_ma1.jpg&quot; alt=&quot;sample_run&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;/assets/img/post/20210124_ma2.jpg&quot; alt=&quot;sample_run&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;/assets/img/post/20210124_ma3.jpeg&quot; alt=&quot;sample_run&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;/assets/img/post/20210124_ma4.jpeg&quot; alt=&quot;sample_run&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;단, 만약 SharedPreferences를 여러 파일로 나누어 사용중이라면&lt;br /&gt;
-각각 파일별로 마이그레이션을 호출해줘야 합니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;이관 작업은 앱 실행 시 딱 한번만 호출해주면 되기 때문에 &lt;br /&gt;
-Application class의 onCreate() 에서 호출해주는 것이 가장 좋습니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4-실행-예제&quot;&gt;4. 실행 예제&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/20210124_sample_run.gif&quot; alt=&quot;sample_run&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/HaenaraShin/BrickSharedPreference&quot;&gt;BrickSharedPreferences 레포지토리&lt;/a&gt;에 자세하게 설명되어 있으니 &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;필요하시다면 샘플 앱과 코드를 참고해보시는 것도 좋을 것 같습니다👍&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;-결론&quot;&gt;🚀 결론&lt;/h1&gt;
-
-&lt;p&gt;모바일 단말에 저장하는 모든 데이터는 암호화 해야합니다.&lt;br /&gt;
-BrickSharedPreferences를 이용해서 간편하게 데이터를 암호화 해보세요.&lt;br /&gt;
-만약 유용하게 쓰셨다면 깃헙에서 &lt;strong&gt;⭐️스타&lt;/strong&gt;를 눌러주세요 👍&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;레퍼런스&quot;&gt;레퍼런스&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/reference/kotlin/androidx/security/crypto/EncryptedSharedPreferences&quot;&gt;EncryptedSharedPreferences - 구글 Android Developer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/HaenaraShin/BrickSharedPreference&quot;&gt;BrickSharedPreferences&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Android," /><category term="Security" /><summary type="html">당신의 안드로이드 앱 데이터는 안전한가요?</summary></entry></feed>
+당장 상용 프로젝트에 적용하기에는 조금 이른 감이 있다고 생각합니다.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Android," /><category term="Kotlin," /><category term="Ktor" /><summary type="html">Ktor가 뭔데?</summary></entry></feed>
