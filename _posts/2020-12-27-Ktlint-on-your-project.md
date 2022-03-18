@@ -2,6 +2,7 @@
 layout: post
 title:  "코틀린 코드를 깔끔하게 정리하는 비결 ~ ktlint"
 feature-img: "assets/img/post/20201227_03.jpeg"
+thumbnail: "assets/img/post/20201227_03.jpeg"
 description: "ktlint를 적용하는 방법 한방 정리"
 date:   2020-12-27 22:42:00 +0900
 categories: Kotlin, Android, ktlint

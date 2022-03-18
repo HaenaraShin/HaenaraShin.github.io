@@ -2,6 +2,7 @@
 layout: post
 title:  "당신의 프로젝트에 Kotlin을 적용하지 말아야할 3가지 이유"
 feature-img: "assets/img/post/20201213_02.jpeg"
+thumbnail: "assets/img/post/20201213_02.jpeg"
 description: "Kotlin 도입을 신중히 생각해봐야할 3가지 이유에 대해 소개합니다."
 date:   2020-12-13 22:42:00 +0900
 categories: Kotlin, Java, Android
