@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[도서리뷰] 팀장부터 CEO까지 알아야 할 기업 정보보안 가이드 리뷰"
+title:  "[도서리뷰] 팀장부터 CEO까지 알아야 할 기업 정보보안 가이드"
 feature-img: "assets/img/post/20220223_thumb.png"
 thumbnail: "assets/img/post/20220223_thumb.png"
 description: 팀장부터 CEO까지 알아야 할 기업 정보보안 가이드 한빛미디어 도서 리뷰 
