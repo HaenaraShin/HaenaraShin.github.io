@@ -27,7 +27,7 @@ GitHub 등에서 원격저장소를 생성하고 Clone을 받아서 체크아웃
 
 <br/><br/>
 
-![branch]({{ "/assets/img/post/20200113_02.png" | relative_url}})
+![branch]({{ "/assets/img/post/20200114_02.png" | relative_url}})
 
 *로컬 브랜치가 붕 떠있다!*
 
@@ -35,12 +35,12 @@ GitHub 등에서 원격저장소를 생성하고 Clone을 받아서 체크아웃
 
 이런 식으로 로컬 브랜치와 origin/master 원격 브랜치가 아예 분리되어 있을 때에는<br/>
 
-![branch]({{ "/assets/img/post/20200113_03.png" | relative_url}})
+![branch]({{ "/assets/img/post/20200114_03.png" | relative_url}})
 
 <br/>
 master 브랜치에서 origin/master 를 병합하려 해도<br/>
  
-![branch]({{ "/assets/img/post/20200113_04.png" | relative_url}})
+![branch]({{ "/assets/img/post/20200114_04.png" | relative_url}})
 
 #### *” fatal : refusing to merge unrelated histories “*
 
@@ -66,7 +66,7 @@ $ git rebase origin/master
 
 와 같이 rebase 를 해주면<br/>
 
-![branch]({{ "/assets/img/post/20200113_05.png" | relative_url}})
+![branch]({{ "/assets/img/post/20200114_05.png" | relative_url}})
 
 master 브랜치에 그동안 로컬에서 작업한 깔끔하게 내용이 올라갑니다. 👏👏
 
@@ -85,7 +85,7 @@ $ git pull origin master –allow-unrelated-histories
 
 와 같이 강제로 병합을 시키면<br/>
 
-![branch]({{ "/assets/img/post/20200113_06.png" | relative_url}})
+![branch]({{ "/assets/img/post/20200114_06.png" | relative_url}})
 
 사진과 같이 병합할 수도 있습니다. 👏👏
 
