@@ -15,8 +15,8 @@ categories: Android, Gradle
 
 GitHub에 오픈소스 안드로이드 프로젝트를 올릴 때 유의하실 점이 있습니다. <br/>
 소스코드는 공개되더라도 비밀정보는 숨겨야한다는 점인데요. 🤫<br/>
-잘못 공개될 경우 악용될 소지도 있고 심한 경우는 금전적 피해가 발생할 수 있습니다.<br/>
-실제로 AWS 토큰이 아주 잠깐 노출되었다가 약 2천만원 상당의 과금이 부과된 사례도 봤습니다. 😱<br/>
+잘못 공개될 경우 라이선스 위반이 되거나, 악용될 소지도 있고 심한 경우는 금전적 피해가 발생할 수 있습니다.<br/>
+실제로 제 주변에서도 AWS 토큰이 잠깐 노출되었다가 약 2천만원 상당의 과금이 부과된 사례도 있었습니다. 😱<br/>
 
 <br/><br/><br/>
 
@@ -70,11 +70,13 @@ store_password=...
 이제 `local.properties`파일로부터 필요한 정보들을 읽어올 차례 입니다.<br/>
 `signingConfigs`에서 받아온 정보로 서명 정보를 구성하면 됩니다. <br/>
 
+<br/>
+
 #### groovy 인 경우
 
 ```groovy
 android {
-    ...
+    ...중략...
     // 서명키 설정 --> local.properties 에서 서명키 정보 관리
     signingConfigs {
         Properties properties = new Properties()
@@ -93,11 +95,13 @@ android {
 
 ```
 
+<br/>
+
 #### Kotlin-DSL 인 경우 
 
 ```kotlin
 android {
-    ...
+    ...중략...
     // 서명키 설정 --> local.properties 에서 서명키 정보 관리
     signingConfigs {
         val properties = Properties().apply {
@@ -140,44 +144,48 @@ api_key=...
 
 ```groovy
 android {
-    ...
+    ...중략...
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
     def apiKey = properties.getProperty('api_key') ?: ""
 
     defaultConfig {
-        ...
+        ...중략...
         buildConfigField "String", "API_KEY", "\"$apiKey\""
     }
 }
 ```
 
+<br/>
+
 #### Kotlin-DSL 인 경우
 
 ```kotlin
 android {
-    ...
+    ...중략...
     val properties = Properties().apply {
         load(FileInputStream("${rootDir}/local.properties"))
     }
     val apiKey = properties["api_key"] ?: ""
 
     defaultConfig {
-        ...
+        ...중략...
         buildConfigField("String", "API_KEY", "\"$apiKey\"")
     }
 }
 
 ```
 
+<br/>
+
 ## BuildConfig.java (자동생성)
 
-build.gradle 설정 후 자동으로 생성되는 BuildConfig.java 파일에 아래와 같이 생성됩니다.<br/>만약 gradle sync를 해도 바뀌지 않는다면 **clean 후 assemble**을 다시 해보시면 됩니다. <br/>
+build.gradle 설정 후 자동으로 생성되는 `BuildConfig.java` 파일에 아래와 같이 생성됩니다.<br/>만약 gradle sync를 해도 바뀌지 않는다면 **clean 후 assemble**을 다시 해보시면 됩니다. <br/>
 
 
 ```java
 public final class BuildConfig {
-  ...
+  ...중략...
   // Field from default config.
   public static final String API_KEY = "...";
 }
@@ -193,7 +201,8 @@ buildConfigField "int", "API_KEY", "$apiKey"
 ```
 
 만약 객체라면 아래와 같이 처리할 수 있습니다.<br/>
-이 경우에는 import를 할 수 없으므로 클래스앞에 패키지명을 붙여서 작성합니다..<br/>
+이 경우에는 따로 import를 할 수 없으므로<br/> 
+클래스앞에 패키지명을 전부 붙여서 작성합니다.<br/>
 
 ```groovy
 buildConfigField "com.sample.pacakge.Foo", "Config", "com.sample.package.Foo(\"$apiKey\")"
