@@ -13,4 +13,4 @@ feature-img: "assets/img/pexels/about-me.png"
 - 💬 LINE ID : haenara.shin
 - ✉️ Mail : [dev.haenara@gmail.com](mailto:dev.haenara@gmail.com)
 - 🦄 Blog : [https://haenarashin.github.io/](https://haenarashin.github.io/)
-- 🔗 Linkedin : https://www.linkedin.com/in/해나라-신-a00548107/
+- 🔗 Linkedin : [https://www.linkedin.com/in/haenara/](https://www.linkedin.com/in/haenara/)
