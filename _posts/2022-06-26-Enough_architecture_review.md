@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[도서리뷰] 적정 소프트웨어 아키텍처"
-feature-img: "assets/img/post/20220326_thumb.png"
-thumbnail: "assets/img/post/20220326_thumb.png"
+feature-img: "assets/img/post/20220626_thumb.png"
+thumbnail: "assets/img/post/20220626_thumb.png"
 description: 적정 소프트웨어 아키텍처 ~ 리스크 주도 접근법 책을 읽고 리뷰한 당신의 SW 아키텍처가 실패한 이유.
 date:   2022-06-26 23:45:00 +0900
 categories: Book
