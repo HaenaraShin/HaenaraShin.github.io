@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "[도서리뷰] 피, 땀, 리셋"
-feature-img: "assets/img/post/20220828_thumb.png"
+feature-img: "assets/img/post/20220828_01.jpeg"
 thumbnail: "assets/img/post/20220828_thumb.png"
-description: 게임 개발자 취준생들의 예방접종이 되어 줄 도서 '피, 땀, 리셋'의 리뷰
+description: 게임 개발자 취준생들의 예방접종이 되어 줄 책 '피, 땀, 리셋'
 date:   2022-08-28 22:28:00 +0900
 categories: Book
 ---
@@ -50,7 +50,7 @@ categories: Book
 
 # 실패가 아닌 리셋
 
-![03]({{ "/assets/img/post/20220828_02.jpeg" | relative_url}})
+![03]({{ "/assets/img/post/20220828_02.png" | relative_url}})
 
 > 이 책도 실패에 관한 이야기이기 때문에 도움이 되지 않을까? 
 
