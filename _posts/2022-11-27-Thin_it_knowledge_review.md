@@ -3,7 +3,7 @@ layout: post
 title:  "[도서리뷰] 혼자 공부하는 얄팍한 코딩지식"
 feature-img: "assets/img/post/20221127_00.jpeg"
 thumbnail: "assets/img/post/20221127_00.jpeg"
-description: "IT 산업의 바다에 표류중인 당신을 위한 나침반이 되저 줄 '혼자 공부하는 얄팍한 코딩지식'을 읽고 리뷰합니다."
+description: "IT 산업의 바다에 표류중인 당신을 위한 나침반이 되저 줄 혼자 공부하는 얄팍한 코딩지식을 읽고 리뷰합니다."
 date:   2022-11-27 23:15:00 +0900
 categories: Book
 ---
