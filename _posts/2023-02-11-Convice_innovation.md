@@ -26,6 +26,8 @@ categories: Daily
 
 이번 글에서는 **혁신적인 기술이 혁신적인 이유를 설득하는 것이 왜 어려운지**를 고민하며 **잘 설득하는 요령**을 다룬다. 
 
+<br/><br/><br/>
+
 # 인터넷은 왜 혁신적일까?
 
 ![internet]({{ "/assets/img/post/20230211_01.jpeg" | relative_url}})<br/>
