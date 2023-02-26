@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "당신의 Kotlin은 정말로 Kotlin스러운가요?"
-feature-img: "assets/img/post/20221030_thumb.jpeg"
+feature-img: "assets/img/post/20230226_00.jpeg"
 thumbnail: "assets/img/post/20230226_00.jpeg"
 description: "당신의 Kotlin은 혹시 Kotlin의 탈을 쓰고 있는 Java는 아닌가요? 그런 당신을 위한 '자바에서 코틀린으로' 도서를 읽고 리뷰합니다."
 date:   2023-02-26 23:39:00 +0900
