@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "당신의 Kotlin은 정말로 Kotlin스러운가요?"
-feature-img: "assets/img/post/20221030_00.jpeg"
-thumbnail: "assets/img/post/20221030_00.jpeg"
+feature-img: "assets/img/post/20221030_thumb.jpeg"
+thumbnail: "assets/img/post/20230226_00.jpeg"
 description: "당신의 Kotlin은 혹시 Kotlin의 탈을 쓰고 있는 Java는 아닌가요? 그런 당신을 위한 '자바에서 코틀린으로' 도서를 읽고 리뷰합니다."
 date:   2023-02-26 23:39:00 +0900
 categories: Book
@@ -40,7 +40,7 @@ Kotlin은 개발자라면 한번 쯤 꿈꿔볼 깔끔하고 세련된 코딩을 
 
 # 나의 Kotlin 리팩터링 경험담
 
-![01]({{ "/assets/img/post/20221230_01.jpeg" | relative_url}})<br/>
+![01]({{ "/assets/img/post/20230226_01.jpeg" | relative_url}})<br/>
 
 Kotlin을 학습하는데에도 노력이 필요하다. 당연한 이야기 같겠지만 막상 Kotlin 문법을 처음 공부할 땐 생각보다 오래 걸리지 않았다. 그러나 막상 그 이후에 코딩을 해보면 Kotlin을 Java처럼 짜고 있는 스스로를 발견했다. 이는 마치 C언어로 개발을 시작한 내가 Java와 같은 OOP 언어를 처음 접했을 때와 비슷한 양상이었다. Kotlin을 제법 Kotlin스럽게 짜는데 까지는 생각보다 오랜 시간과 경험이 필요했다. 
 
