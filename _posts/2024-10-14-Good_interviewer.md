@@ -4,7 +4,7 @@ title: "좋은 인상을 남기는 면접관"
 feature-img: "assets/img/post/20241013_thumb.jpeg"
 thumbnail: "assets/img/post/20241013_thumb.jpeg"
 description: "면접관을 실제로 해봤던 경험, 그리고 면접자로써 당해본(?) 다수의 면접 경험담을 모아 좋은 면접관이 되는 법을 정리해보았다."
-date:   2024-10-13 23:55:00 +0900
+date:   2024-10-14 00:00:00 +0900
 categories: Job
 ---
 
