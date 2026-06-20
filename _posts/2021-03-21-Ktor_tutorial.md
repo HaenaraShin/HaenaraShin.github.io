@@ -56,7 +56,7 @@ categories: Android, Kotlin, Ktor
 - 샘플 프로젝트 링크 : [https://github.com/HaenaraShin/Ktor-sample](https://github.com/HaenaraShin/Ktor-sample)
 <br/><br/>
 
-일단은 한번 써봐야 이게 좋은지 않좋은지 알 수 있겠죠?<br/>
+일단은 한번 써봐야 이게 좋은지 안 좋은지 알 수 있겠죠?<br/>
 서버 구성 코드도 함께 있다면 좋겠지만.. 이 글에서는 Android 기준으로 작성합니다.<br/>
 예제 코드에서는 core 모듈을 분리하여 작성하였기 때문에 <br/>
 안드로이드를 모르시더라도 순수 Kotlin(JVM)으로 구현하는 코드를 참고하실 수 있습니다.<br/>

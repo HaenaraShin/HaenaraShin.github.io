@@ -92,7 +92,7 @@ jar {
 
 ![project_create]({{ "/assets/img/post/20210731_07.png" | relative_url}})
 
-- gralde 세팅은 동일하게 구성하면 됩니다. 
+- gradle 세팅은 동일하게 구성하면 됩니다. 
 
 이것을 이용한 안드로이드/PC 크로스플랫폼 개발도 가능한데, 이 것은 차후에 기회가 된다면 풀어보도록 하겠습니다.
 <br/><br/><br/>

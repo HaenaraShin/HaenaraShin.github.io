@@ -16,7 +16,7 @@ categories: Kotlin
 
 ## Jar 파일을 Gradle task로?
 
-유틸프로그램 또는 스크립트를 Java 또는 Kotlin으로 작성해서 <br/>
+유틸 프로그램 또는 스크립트를 Java 또는 Kotlin으로 작성해서 <br/>
 간단한 업무 자동화를 적용해보려는 시도를 해보신 적이 있으신가요?<br/>
 Kotlin DSL을 활용한다면 물론 jar 파일 없이도 코틀린을 gradle에서 실행할 수 있지만<br/>
 굳이 그러지 않더라도 별도의 jar파일로 프로젝트에 추가하여 gradle에서 task로 실행할 수 있습니다.<br/>
@@ -69,7 +69,7 @@ tasks.register("sample_task", JavaExec::class) {
 
 위와 같이 
 만약에 Path에 `/`를 넣어서 윈도우에서 동작하지 않는다면 아래와 같이 path를 사용하여 해결합니다.<br/>
-단 함수위에 Experimental 어노테이션을 추가해야한다.<br/>
+단 함수위에 Experimental 어노테이션을 추가해야 합니다.<br/>
 
 ```kotlin
 @OptIn(ExperimentalPathApi::class)

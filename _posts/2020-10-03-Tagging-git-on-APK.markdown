@@ -6,7 +6,7 @@ date:   2020-10-03 17:42:00 +0900
 categories: Android
 ---
 
-Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설염합니다. 
+Android APK 생성 시 APK 파일 이름에 Git 리비전 태그를 붙이는 방법을 설명합니다.
 
 안드로이드에서 처음 앱을 빌드하면 apk는 보통 
 

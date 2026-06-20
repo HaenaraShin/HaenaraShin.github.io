@@ -137,7 +137,7 @@ ktlint {
 
 ## 3. build.gradle(non-android module) 수정하기
 
-**순수 Java/Koltin(JAR) 모듈**에 추가하는 방법입니다. <br/>
+**순수 Java/Kotlin(JAR) 모듈**에 추가하는 방법입니다. <br/>
 
 - 최상단에 plugin `org.jlleitschuh.gradle.ktlint` 를 추가합니다.
 - ktlint 설정값을 추가합니다.
@@ -178,7 +178,7 @@ ktlint {
 ## 1. 수동으로 Ktlint 체크하기 🔍 
 
 ktlint를 적용하게 되면 수시로 체크하게 되는데요<br/>
-언제든지 아래와 같이 수동으로 코딩스타일을 준수하고 있는 지 확인할 수 있습니다.<br/><br/>
+언제든지 아래와 같이 수동으로 코딩스타일을 준수하고 있는지 확인할 수 있습니다.<br/><br/>
 
 Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 
@@ -209,7 +209,7 @@ Android Studio의 Gradle 탭에서 다음 Task를 실행합니다.<br/>
 
 ## 2. Commit시 Ktlint 체크 적용하기 (Git hook) 🎣
 
-매번 수동으로 체크할수는 없겠죠?<br/>
+매번 수동으로 체크할 수는 없겠죠?<br/>
 아래와 같이 git-hook에 적용하고 나면 commit 할 때마다 ktlint를 체크하여<br/>
 스타일을 준수하지 않았다면 커밋이 실패하게 됩니다.<br/><br/>
 

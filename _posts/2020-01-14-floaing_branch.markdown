@@ -68,7 +68,7 @@ $ git rebase origin/master
 
 ![branch]({{ "/assets/img/post/20200114_05.png" | relative_url}})
 
-master 브랜치에 그동안 로컬에서 작업한 깔끔하게 내용이 올라갑니다. 👏👏
+master 브랜치에 그동안 로컬에서 작업한 내용이 깔끔하게 올라갑니다. 👏👏
 
 <br/><br/><br/> 
 

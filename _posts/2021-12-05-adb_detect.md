@@ -149,7 +149,7 @@ class UsbDebugReceiver : BroadcastReceiver() {
 
 > ⚠️⚠️⚠️주의할 점⚠️⚠️⚠️<br/>
 이 USB 이벤트는 수초 안에 여러번 발생하는 경우가 있으니<br/>
-방어코드를넣지 않으면 여러번 실행될 수 있습니다!!!<br/>
+방어코드를 넣지 않으면 여러번 실행될 수 있습니다!!!<br/>
 
 리시버를 실제 Application 또는 Activity 에서 등록하는 코드는 아래와 같습니다.<br/>
 
@@ -164,7 +164,7 @@ context.registerReceiver(UsbDebugReceiver(), filter)
 
 >⚠️⚠️⚠️주의할 점⚠️⚠️⚠️<br/>
 어떤 동작을 할 건지에 따라 Foreground 에 있을 때만 동작하고<br/>
-Background로  내리갈 땐 리시버 해지가 필요할 수도 있습니다.<br/>
+Background로 내려갈 땐 리시버 해지가 필요할 수도 있습니다.<br/>
 앱을 강제 종료하는 액티비티 실행과 같은 액션일 경우<br/>
 실행중이지 않고 백그라운드에 있는데 강제 종료 액티비티가 실행되는 등<br/>
 불필요한 액션이 발생할 수 있습니다.<br/>
