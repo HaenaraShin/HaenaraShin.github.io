@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://haenarashin.github.io/sitemap.xml
